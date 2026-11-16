@@ -30,12 +30,14 @@
       background-color: var(--bg-midnight);
       color: var(--text-white);
       line-height: 1.65;
+      overflow-x: hidden;
     }
     a { text-decoration: none; color: inherit; }
 
     /* Navigation */
     header {
-      background: rgba(5, 17, 30, 0.94);
+      width: 100%;
+      background: rgba(5, 17, 30, 0.95);
       border-bottom: 1px solid var(--border-subtle);
       padding: 1rem 4%;
       position: sticky;
@@ -43,7 +45,7 @@
       z-index: 100;
     }
     .nav-inner {
-      max-width: 1360px;
+      max-width: 1320px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -62,7 +64,7 @@
     .brand-name span { color: var(--emerald-glow); }
     .brand-sub { font-size: 0.78rem; color: var(--text-muted); }
 
-    nav { display: flex; gap: 1.65rem; align-items: center; font-size: 0.94rem; font-weight: 600; }
+    nav { display: flex; gap: 1.6rem; align-items: center; font-size: 0.94rem; font-weight: 600; flex-wrap: wrap; }
     nav a { color: var(--text-slate); transition: color 0.2s; }
     nav a:hover { color: var(--emerald-glow); }
     .nav-btn {
@@ -75,20 +77,21 @@
 
     /* Hero */
     .hero {
-      background: radial-gradient(circle at top right, rgba(13, 148, 136, 0.28) 0%, var(--bg-midnight) 58%);
-      padding: 5rem 4% 5.25rem;
+      width: 100%;
+      background: radial-gradient(circle at top right, rgba(13, 148, 136, 0.28) 0%, var(--bg-midnight) 60%);
+      padding: 4.5rem 4% 5rem;
       border-bottom: 1px solid var(--border-subtle);
     }
     .hero-grid {
-      max-width: 1360px;
+      max-width: 1320px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.2fr 0.85fr;
-      gap: 3.5rem;
+      gap: 3rem;
       align-items: center;
     }
     @media (max-width: 960px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.25rem; }
     }
     .kicker {
       display: inline-block;
@@ -101,27 +104,27 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.25rem;
     }
     .hero h1 {
-      font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.25rem;
     }
     .hero h1 span { color: var(--emerald-glow); display: block; }
     .hero p {
-      font-size: 1.12rem;
+      font-size: 1.1rem;
       color: var(--text-slate);
-      margin-bottom: 2.2rem;
-      max-width: 680px;
+      margin-bottom: 2rem;
+      max-width: 660px;
     }
-    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .cta-group { display: flex; gap: 0.9rem; flex-wrap: wrap; }
     .btn {
-      padding: 0.95rem 1.7rem;
+      padding: 0.9rem 1.6rem;
       border-radius: 0.65rem;
       font-weight: 700;
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
@@ -149,34 +152,40 @@
       background: var(--bg-navy-card);
       border: 1.5px solid var(--border-glow);
       border-radius: 1.35rem;
-      padding: 2.2rem;
+      padding: 2rem;
       box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5);
     }
     .card-top {
       display: flex;
       align-items: center;
       gap: 1rem;
-      padding-bottom: 1.15rem;
-      margin-bottom: 1.25rem;
+      padding-bottom: 1.1rem;
+      margin-bottom: 1.2rem;
       border-bottom: 1px solid var(--border-subtle);
     }
-    .card-top img { height: 64px; width: 64px; border-radius: 50%; }
-    .stat-list { display: grid; gap: 0.85rem; }
+    .card-top img { height: 60px; width: 60px; border-radius: 50%; }
+    .stat-list { display: grid; gap: 0.8rem; }
     .stat-item {
       background: var(--bg-navy-elevated);
       border: 1px solid var(--border-subtle);
       border-radius: 0.8rem;
-      padding: 0.9rem 1.1rem;
+      padding: 0.85rem 1.05rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.5rem;
     }
     .stat-item span { font-size: 0.9rem; color: var(--text-slate); font-weight: 600; }
-    .stat-item strong { font-size: 0.95rem; color: var(--emerald-glow); }
+    .stat-item strong { font-size: 0.92rem; color: var(--emerald-glow); }
 
     /* Sections */
-    .section { max-width: 1360px; margin: 0 auto; padding: 5rem 4%; }
-    .section-head { text-align: center; max-width: 780px; margin: 0 auto 3.5rem; }
+    .section {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 4.75rem 4%;
+    }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 3.25rem; }
     .sec-tag {
       font-size: 0.8rem;
       font-weight: 800;
@@ -185,14 +194,14 @@
       color: var(--emerald-glow);
       margin-bottom: 0.5rem;
     }
-    .section-head h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 0.75rem; }
-    .section-head p { color: var(--text-slate); font-size: 1.06rem; }
+    .section-head h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .section-head p { color: var(--text-slate); font-size: 1.05rem; }
 
     /* 3-Column Healthcare Pillars */
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.85rem;
     }
     @media (max-width: 1024px) {
       .grid-3 { grid-template-columns: 1fr; }
@@ -201,7 +210,7 @@
       background: var(--bg-navy-card);
       border: 1.5px solid var(--border-subtle);
       border-radius: 1.2rem;
-      padding: 2.25rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -225,14 +234,14 @@
     .badge-hr { background: rgba(245, 158, 11, 0.15); color: var(--amber-gold); border: 1px solid rgba(245, 158, 11, 0.35); }
     .badge-train { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); }
 
-    .pillar-card h3 { font-size: 1.42rem; margin-bottom: 0.75rem; }
-    .pillar-card p { color: var(--text-slate); font-size: 0.96rem; margin-bottom: 1.35rem; }
-    .bullet-list { list-style: none; margin-bottom: 1.85rem; }
+    .pillar-card h3 { font-size: 1.38rem; margin-bottom: 0.75rem; }
+    .pillar-card p { color: var(--text-slate); font-size: 0.95rem; margin-bottom: 1.3rem; }
+    .bullet-list { list-style: none; margin-bottom: 1.75rem; }
     .bullet-list li {
       padding: 0.45rem 0;
-      font-size: 0.93rem;
+      font-size: 0.92rem;
       color: var(--text-slate);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
     .card-btn {
       display: block;
@@ -244,6 +253,7 @@
       background: var(--bg-navy-elevated);
       border: 1px solid var(--border-glow);
       color: var(--emerald-glow);
+      transition: all 0.2s ease;
     }
     .card-btn:hover { background: var(--emerald-bright); color: #ffffff; }
 
@@ -252,10 +262,10 @@
       background: linear-gradient(145deg, var(--bg-navy-card), var(--bg-navy-elevated));
       border: 1px solid var(--border-glow);
       border-radius: 1.25rem;
-      padding: 2.75rem;
+      padding: 2.5rem;
       display: grid;
       grid-template-columns: 1.3fr 0.7fr;
-      gap: 2.5rem;
+      gap: 2.25rem;
       align-items: center;
     }
     @media (max-width: 900px) {
@@ -274,10 +284,11 @@
 
     /* Footer */
     footer {
+      width: 100%;
       background: #030a12;
       border-top: 1px solid var(--border-subtle);
       color: var(--text-muted);
-      padding: 3rem 4%;
+      padding: 2.75rem 4%;
       text-align: center;
       font-size: 0.92rem;
     }
@@ -297,143 +308,3 @@
       </div>
       <nav>
         <a href="#pillars">3 Core Pillars</a>
-        <a href="https://techyatchlab.com" target="_blank">TechYatch Lab™</a>
-        <a href="https://github.com" target="_blank">GitHub Repo</a>
-  <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <div class="kicker">Unified Clinical Operations &amp; Workforce Intelligence</div>
-        <h1>
-          Smarter HealthTech,
-          <span>Resilient Clinical Teams</span>
-        </h1>
-        <p>
-          <strong>TWEVIX CARE™</strong> (by Twevix™) empowers hospitals, private clinics, and healthcare leaders across three integrated pillars: <strong>No-Code Clinical AI Software</strong>, <strong>Healthcare HR &amp; Surge Roster Optimization</strong>, and <strong>Applied Healthcare Analytics Training</strong>.
-        </p>
-        <div class="cta-group">
-          <a href="https://streamlit.app" target="_blank" class="btn btn-emerald">🏥 Open TWEVIX CARE™ Engine</a>
-          <a href="https://techyatchlab.com" target="_blank" class="btn btn-amber">🕵️ Explore TechYatch Lab™</a>
-          <a href="https://github.com" target="_blank" class="btn btn-outline">💻 Open-Source Architecture</a>
-        </div>
-      </div>
-
-      <div class="command-card">
-        <div class="card-top">
-          <img src="twevixcare-logo.png" alt="TWEVIX CARE Emblem" />
-          <div>
-            <div style="font-weight:800; font-size:1.1rem;">TWEVIX CARE™ Live Suite</div>
-            <div style="font-size:0.84rem; color:var(--text-muted);">4 Clinical &amp; Workforce Decision Engines</div>
-          </div>
-        </div>
-        <div class="stat-list">
-          <div class="stat-item">
-            <span>📈 Surge &amp; Nurse Roster Engine</span>
-            <strong>Holt-Winters ML</strong>
-          </div>
-          <div class="stat-item">
-            <span>🛡️ Cold-Chain &amp; Billing Audit</span>
-            <strong>IsolationForest</strong>
-          </div>
-          <div class="stat-item">
-            <span>⚖️ Clinical Triage Equity Audit</span>
-            <strong>Bias Mitigation</strong>
-          </div>
-          <div class="stat-item">
-            <span>💷 Board AI ROI &amp; Drift Control</span>
-            <strong>36-Mo MLOps</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="pillars" class="section">
-    <div class="section-head">
-      <div class="sec-tag">Three-Pillar Healthcare Ecosystem</div>
-      <h2>How TWEVIX CARE™ Transforms Healthcare Delivery</h2>
-      <p>Built from 5+ years of UK frontline healthcare operational experience and MSc Data Science engineering—combining predictive software, workforce planning, and practical clinical training.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="pillar-card">
-        <div>
-          <span class="col-badge badge-tech">01 • HealthTech Software</span>
-          <h3>🏥 Clinical Decision-Intelligence</h3>
-          <p>No-code predictive engines that let clinic directors and ward managers ingest anonymized operational CSV logs to prevent bottlenecks, protect vaccine cold chains, and audit triage fairness.</p>
-          <ul class="bullet-list">
-            <li>✅ <strong>14-Day Patient Surge Forecasting:</strong> Predict Monday/Friday admission spikes before 4-hour wait breaches occur.</li>
-            <li>✅ <strong>Automated Safety &amp; Billing Audits:</strong> Unsupervised ML detects fridge excursions (&gt;8°C) and supplier billing outliers.</li>
-            <li>✅ <strong>Algorithmic Triage Governance:</strong> Ensures older adults, rural patients, and minority cohorts receive equitable priority.</li>
-            <li>✅ <strong>Board Capital &amp; Drift Modeling:</strong> 36-month ROI calculator with automated quarterly MLOps retraining schedules.</li>
-          </ul>
-        </div>
-        <a href="https://streamlit.app" target="_blank" class="card-btn">Launch HealthTech Engine →</a>
-      </div>
-
-      <div class="pillar-card">
-        <div>
-          <span class="col-badge badge-hr">02 • Healthcare HR &amp; Workforce</span>
-          <h3>👩‍⚕️ Smart Roster &amp; Retention Intelligence</h3>
-          <p>Data-driven healthcare HR analytics designed to cut expensive agency nurse overspending, balance safe nurse-to-patient ratios, and reduce frontline clinical burnout.</p>
-          <ul class="bullet-list">
-            <li>✅ <strong>Flex vs. Agency Shift Optimization:</strong> Deploy flex staff strictly on forecasted surge days instead of costly blanket hiring.</li>
-            <li>✅ <strong>Safe Workload Guardrails:</strong> Model patient-per-nurse capacity thresholds to protect staff wellbeing and care quality.</li>
-            <li>✅ <strong>Shift Turnover &amp; Burnout Diagnostics:</strong> Identify high-strain shift patterns early to improve clinical staff retention.</li>
-            <li>✅ <strong>Custom Ward CSV Rostering:</strong> Upload anonymized clinic shift logs to test staffing scenarios in seconds.</li>
-          </ul>
-        </div>
-        <a href="https://streamlit.app" target="_blank" class="card-btn">Open Workforce Forecaster →</a>
-      </div>
-
-      <div class="pillar-card">
-        <div>
-          <span class="col-badge badge-train">03 • Healthcare Training &amp; IP</span>
-          <h3>🎓 Clinical Data &amp; AI Upskilling</h3>
-          <p>Practical, plain-English training sandboxes and published books empowering nurses, healthcare administrators, and medical leaders to interpret data without writing code.</p>
-          <ul class="bullet-list">
-            <li>✅ <strong>Hands-On Clinical Simulation Labs:</strong> Interactive browser sandboxes paired directly with Book Series 2 &amp; 3.</li>
-            <li>✅ <strong><em>Simplifying Data Analytics to a Toddler</em>:</strong> Co-authored trilogy translating ML, governance, and KPIs into plain English.</li>
-            <li>✅ <strong>Verified Competency Credentials:</strong> SHA-256 verifiable digital certificates via sibling platform <a href="https://techyatchlab.com" style="color:#38bdf8; text-decoration:underline;">TechYatch Lab™</a>.</li>
-            <li>✅ <strong>Institutional Cohort Licensing:</strong> Turnkey simulation sandboxes for healthcare academies, universities, and hospital L&amp;D.</li>
-          </ul>
-        </div>
-        <a href="https://techyatchlab.com" target="_blank" class="card-btn">Explore Training Sandboxes →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:1rem;">
-    <div class="founder-card">
-      <div>
-        <div class="sec-tag">Founder &amp; Lead Architect</div>
-        <h3 style="font-size:1.85rem; margin-bottom:0.85rem;">Engineered by Willa Abraham</h3>
-        <p style="color:var(--text-slate); font-size:1rem;">
-          Willa Abraham combines five years of frontline UK healthcare operational experience with an MSc in Data Science for Business from the University of Stirling. She founded <strong>Twevix™</strong> and <strong>TWEVIX CARE™</strong> to give healthcare executives, HR leads, and clinical teams practical predictive software they can trust without needing a data science degree.
-        </p>
-        <div class="creds">
-          <span class="cred-pill">🎓 MSc Data Science for Business (University of Stirling, UK)</span>
-          <span class="cred-pill">🏥 5+ Years UK Healthcare Operations</span>
-          <span class="cred-pill">📘 Co-Author, 3-Book Analytics Trilogy</span>
-        </div>
-      </div>
-      <div style="background:rgba(5,17,30,0.65); padding:1.85rem; border-radius:1rem; border:1px solid var(--border-glow);">
-        <h4 style="color:var(--emerald-glow); margin-bottom:0.65rem; font-size:1.15rem;">Hospital &amp; University Pilots</h4>
-        <p style="font-size:0.92rem; color:var(--text-slate); margin-bottom:1.25rem;">
-          Partner with TWEVIX CARE™ to deploy custom clinical surge forecasting, healthcare HR roster modeling, and accredited staff data literacy sandboxes.
-        </p>
-        <a href="https://github.com" target="_blank" class="btn btn-emerald" style="width:100%; justify-content:center;">Inspect Technical Architecture →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>
-      &copy; 2026 <strong>TWEVIX CARE™</strong> by <strong>Twevix™</strong> 
-      <a href="https://streamlit.app" target="_blank">TWEVIX CARE™ App</a> 
-      <a href="https://techyatchlab.com" target="_blank">TechYatch Lab™</a> 
-      <a href="https://github.com" target="_blank">GitHub</a>
-    </p>
-  </footer>
-
-</body>
-</html>

@@ -1,163 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TWEVIX CARE™ | HealthTech, Healthcare Recruitment &amp; Clinical Training</title>
-  <link rel="icon" type="image/png" href="twevixcare-logo.png" />
-  <style>
-    :root {
-      --bg: #040d1a;
-      --card: #0b192c;
-      --card-hi: #112540;
-      --emerald: #10b981;
-      --mint: #34d399;
-      --amber: #f59e0b;
-      --sky: #38bdf8;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --border: rgba(255,255,255,0.1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-
-    /* Navbar */
-    header { background: rgba(4,13,26,0.95); border-bottom: 1px solid var(--border); padding: 1rem 5%; position: sticky; top: 0; z-index: 99; }
-    .nav { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .brand { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; font-size: 1.3rem; }
-    .brand img { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--emerald); }
-    .brand span { color: var(--mint); }
-    .links { display: flex; gap: 1.4rem; align-items: center; font-size: 0.92rem; font-weight: 600; color: var(--muted); }
-    .links a:hover { color: var(--mint); }
-    .pill-btn { background: linear-gradient(135deg, var(--emerald), #059669); color: #fff !important; padding: 0.55rem 1.25rem; border-radius: 999px; }
-
-    /* Hero */
-    .hero { max-width: 1280px; margin: 0 auto; padding: 4.5rem 5% 3.5rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(16,185,129,0.14); border: 1px solid rgba(52,211,153,0.35); color: var(--mint); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.2rem; }
-    .hero h1 { font-size: clamp(2.1rem, 4.2vw, 3.4rem); font-weight: 800; line-height: 1.15; max-width: 860px; margin: 0 auto 1.1rem; }
-    .hero h1 span { color: var(--mint); }
-    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 2.2rem; }
-
-    /* Interactive Client Pathway Buttons */
-    .choice-bar { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
-    .choice-btn { padding: 0.95rem 1.65rem; border-radius: 0.7rem; font-weight: 700; font-size: 0.98rem; cursor: pointer; border: 1.5px solid transparent; transition: transform 0.2s, box-shadow 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-    .choice-btn:hover { transform: translateY(-2px); }
-    .btn-tech { background: linear-gradient(135deg, var(--emerald), #059669); color: #fff; box-shadow: 0 8px 24px rgba(16,185,129,0.3); }
-    .btn-rec { background: linear-gradient(135deg, var(--amber), #d97706); color: #040d1a; box-shadow: 0 8px 24px rgba(245,158,11,0.28); }
-    .btn-trn { background: linear-gradient(135deg, var(--sky), #0284c7); color: #040d1a; box-shadow: 0 8px 24px rgba(56,189,248,0.28); }
-
-    /* Interactive Spotlight Panel */
-    .spotlight { background: var(--card); border: 1.5px solid rgba(52,211,153,0.3); border-radius: 1.2rem; padding: 2rem; max-width: 960px; margin: 0 auto; text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-    .spot-info { max-width: 600px; }
-    .spot-tag { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--mint); letter-spacing: 0.06em; margin-bottom: 0.4rem; }
-    .spot-info h3 { font-size: 1.45rem; margin-bottom: 0.5rem; }
-    .spot-info p { color: var(--muted); font-size: 0.96rem; margin: 0; }
-    .spot-cta { background: var(--card-hi); border: 1px solid var(--mint); color: var(--mint); padding: 0.85rem 1.4rem; border-radius: 0.6rem; font-weight: 700; white-space: nowrap; }
-    .spot-cta:hover { background: var(--emerald); color: #fff; }
-
-    /* 3-Column SaaS Grid */
-    .section { max-width: 1280px; margin: 0 auto; padding: 4rem 5%; }
-    .sec-title { text-align: center; margin-bottom: 2.75rem; }
-    .sec-title h2 { font-size: 2.1rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .sec-title p { color: var(--muted); }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem; }
-    @media (max-width: 960px) { .grid-3 { grid-template-columns: 1fr; } }
-
-    .saas-card { background: var(--card); border: 1px solid var(--border); border-radius: 1.1rem; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s, transform 0.2s; }
-    .saas-card:hover { border-color: var(--mint); transform: translateY(-4px); }
-    .tag { display: inline-block; font-size: 0.74rem; font-weight: 800; padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.9rem; text-transform: uppercase; }
-    .t-em { background: rgba(16,185,129,0.15); color: var(--mint); }
-    .t-am { background: rgba(245,158,11,0.15); color: var(--amber); }
-    .t-sk { background: rgba(56,189,248,0.15); color: var(--sky); }
-    .saas-card h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
-    .saas-card p { color: var(--muted); font-size: 0.94rem; margin-bottom: 1.2rem; }
-    .saas-card ul { list-style: none; margin-bottom: 1.6rem; font-size: 0.9rem; color: #cbd5e1; }
-    .saas-card li { padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .card-link { display: block; text-align: center; padding: 0.8rem; border-radius: 0.6rem; font-weight: 700; font-size: 0.92rem; background: var(--card-hi); border: 1px solid var(--border); color: var(--text); }
-    .card-link:hover { border-color: var(--mint); color: var(--mint); }
-
-    /* Footer */
-    footer { border-top: 1px solid var(--border); padding: 2.5rem 5%; text-align: center; color: var(--muted); font-size: 0.88rem; }
-    footer a { color: var(--mint); font-weight: 600; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TWEVIX CARE™ | HealthTech, Healthcare Recruitment & Training</title>
+<link rel="icon" type="image/png" href="twevixcare-logo.png" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#040d1a;color:#f8fafc;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{background:#061326;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 5%;position:sticky;top:0;z-index:50}
+.nav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem}
+.brand img{width:40px;height:40px;border-radius:50%;border:1.5px solid #10b981}
+.brand span{color:#34d399}
+.links{display:flex;gap:1.25rem;align-items:center;font-size:.92rem;font-weight:600;color:#94a3b8}
+.links a:hover{color:#34d399}
+.cta-sm{background:#10b981;color:#fff!important;padding:.5rem 1.1rem;border-radius:999px}
+.hero{max-width:1200px;margin:0 auto;padding:4rem 5% 3rem;text-align:center}
+.pill{display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(52,211,153,.35);color:#34d399;padding:.3rem .9rem;border-radius:999px;font-size:.78rem;font-weight:700;margin-bottom:1rem}
+.hero h1{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;line-height:1.15;max-width:800px;margin:0 auto 1rem}
+.hero h1 span{color:#34d399}
+.hero p{color:#94a3b8;font-size:1.05rem;max-width:650px;margin:0 auto 2rem}
+.tabs{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin-bottom:2rem}
+.tab{padding:.85rem 1.4rem;border-radius:.6rem;font-weight:700;font-size:.95rem;cursor:pointer;border:2px solid transparent;transition:.2s}
+.tab-tech{background:#10b981;color:#fff}
+.tab-rec{background:#f59e0b;color:#040d1a}
+.tab-trn{background:#38bdf8;color:#040d1a}
+.tab.active{box-shadow:0 0 0 3px #fff}
+.panel{background:#0b192c;border:1px solid rgba(52,211,153,.3);border-radius:1rem;padding:1.75rem;max-width:860px;margin:0 auto;text-align:left;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem}
+.panel h3{font-size:1.3rem;margin-bottom:.35rem}
+.panel p{color:#94a3b8;font-size:.94rem;max-width:540px}
+.panel-btn{background:#10b981;color:#fff;padding:.8rem 1.3rem;border-radius:.55rem;font-weight:700;font-size:.92rem;white-space:nowrap}
+.wrap{max-width:1200px;margin:0 auto;padding:3rem 5% 4rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:#0b192c;border:1px solid rgba(255,255,255,.1);border-radius:1rem;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between}
+.card:hover{border-color:#34d399}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;padding:.2rem .65rem;border-radius:999px;margin-bottom:.75rem;text-transform:uppercase}
+.em{background:rgba(16,185,129,.15);color:#34d399}
+.am{background:rgba(245,158,11,.15);color:#f59e0b}
+.sk{background:rgba(56,189,248,.15);color:#38bdf8}
+.card h3{font-size:1.25rem;margin-bottom:.5rem}
+.card p{color:#94a3b8;font-size:.9rem;margin-bottom:1rem}
+.card ul{list-style:none;margin-bottom:1.4rem;font-size:.88rem;color:#cbd5e1}
+.card li{padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.card a{display:block;text-align:center;padding:.75rem;border-radius:.5rem;font-weight:700;font-size:.9rem;background:#112540;border:1px solid rgba(255,255,255,.12)}
+.card a:hover{border-color:#34d399;color:#34d399}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:2rem 5%;text-align:center;color:#94a3b8;font-size:.86rem}
+footer a{color:#34d399;font-weight:600}
+</style>
 </head>
 <body>
-
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <img src="twevixcare-logo.png" alt="TWEVIX CARE Logo" />
-        <div>TWEVIX <span>CARE™</span></div>
-      </div>
-      <div class="links">
-        <a href="#solutions">Solutions</a>
-        <a href="https://techyatchlab.com" target="_blank">TechYatch Lab™</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://streamlit.app" target="_blank" class="pill-btn">Launch App →</a>
-      </div>
+<header>
+  <div class="nav">
+    <div class="brand"><img src="twevixcare-logo.png" alt="Logo" /><div>TWEVIX <span>CARE™</span></div></div>
+    <div class="links">
+      <a href="#pillars">Solutions</a>
+      <a href="https://techyatchlab.com" target="_blank">TechYatch Lab™</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://streamlit.app" target="_blank" class="cta-sm">Launch App →</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="badge">By Twevix™ • Healthcare Intelligence Ecosystem</div>
-    <h1>One Platform for <span>HealthTech, Recruitment &amp; Training</span></h1>
-    <p>Choose your pathway below to deploy no-code clinical AI software, optimize healthcare workforce recruitment and rosters, or train clinical teams with interactive analytics sandboxes.</p>
-
-    <div class="choice-bar">
-      <button class="choice-btn btn-tech" onclick="selectPath('tech')">🏥 HealthTech Software</button>
-      <button class="choice-btn btn-rec" onclick="selectPath('rec')">👩‍⚕️ Healthcare Recruitment &amp; HR</button>
-      <button class="choice-btn btn-trn" onclick="selectPath('trn')">🎓 Clinical Data Training</button>
+<section class="hero">
+  <div class="pill">By Twevix™ • Healthcare Intelligence Ecosystem</div>
+  <h1>One Platform for <span>HealthTech, Recruitment &amp; Training</span></h1>
+  <p>Select your area below to launch clinical AI software, optimize healthcare workforce recruitment, or train clinical teams.</p>
+  <div class="tabs">
+    <button class="tab tab-tech active" id="b-tech" onclick="pick('tech')">🏥 HealthTech Software</button>
+    <button class="tab tab-rec" id="b-rec" onclick="pick('rec')">👩‍⚕️ Healthcare Recruitment</button>
+    <button class="tab tab-trn" id="b-trn" onclick="pick('trn')">🎓 Clinical Training</button>
+  </div>
+  <div class="panel">
+    <div>
+      <h3 id="p-title">TWEVIX CARE™ Clinical Decision-Intelligence</h3>
+      <p id="p-desc">Ingest anonymized clinic CSV logs to forecast 14-day patient surges, catch cold-chain and billing anomalies with ML, audit triage fairness, and model 36-month board AI ROI.</p>
     </div>
+    <a href="https://streamlit.app" target="_blank" class="panel-btn" id="p-btn">Open HealthTech App →</a>
+  </div>
+</section>
 
-    <div class="spotlight" id="spotlightBox">
-      <div class="spot-info">
-        <div class="spot-tag" id="spotTag">01 • Flagship HealthTech Engine</div>
-        <h3 id="spotTitle">TWEVIX CARE™ Clinical Decision-Intelligence</h3>
-        <p id="spotDesc">Upload anonymized clinic CSV logs to forecast 14-day patient surges, catch vaccine fridge and billing anomalies with ML, audit triage fairness, and model 36-month board AI ROI.</p>
+<section id="pillars" class="wrap">
+  <div class="grid">
+    <div class="card">
+      <div>
+        <span class="tag em">01 • HealthTech</span>
+        <h3>🏥 Clinical AI &amp; Operations</h3>
+        <p>No-code predictive decision tools for hospitals and clinics.</p>
+        <ul>
+          <li>✓ 14-Day Patient Surge Forecaster</li>
+          <li>✓ Cold-Chain &amp; Billing ML Auditor</li>
+          <li>✓ Triage Fairness &amp; Bias Governance</li>
+          <li>✓ 36-Month AI ROI &amp; Drift Simulator</li>
+        </ul>
       </div>
-      <a href="https://streamlit.app" target="_blank" class="spot-cta" id="spotLink">Open HealthTech App →</a>
+      <a href="https://streamlit.app" target="_blank">Launch HealthTech Engine →</a>
     </div>
-  </section>
-
-  <section id="solutions" class="section">
-    <div class="sec-title">
-      <h2>Tailored Solutions for Healthcare Organizations</h2>
-      <p>Engineered by Willa Abraham (MSc Data Science for Business, University of Stirling • 5+ Years UK Healthcare Operations)</p>
+    <div class="card">
+      <div>
+        <span class="tag am">02 • Recruitment &amp; HR</span>
+        <h3>👩‍⚕️ Healthcare Recruitment</h3>
+        <p>Data-driven workforce planning and clinical staffing intelligence.</p>
+        <ul>
+          <li>✓ Flex vs. Agency Shift Optimization</li>
+          <li>✓ Safe Patient-to-Nurse Ratios</li>
+          <li>✓ Clinical Talent &amp; Retention Analytics</li>
+          <li>✓ Custom Ward Roster CSV Simulation</li>
+        </ul>
+      </div>
+      <a href="https://streamlit.app" target="_blank">Open Workforce Suite →</a>
     </div>
-
-    <div class="grid-3">
-      <div class="saas-card">
-        <div>
-          <span class="tag t-em">01 • HealthTech</span>
-          <h3>🏥 Clinical AI &amp; Operations</h3>
-          <p>Predictive decision-intelligence tools built for hospitals, private clinics, and ward managers.</p>
-          <ul>
-            <li>✓ 14-Day Patient Surge Forecaster (Holt-Winters)</li>
-            <li>✓ Cold-Chain &amp; Billing Anomaly Auditor (ML)</li>
-            <li>✓ Clinical Triage Equity &amp; Bias Governance</li>
-            <li>✓ 36-Month Diagnostic AI ROI &amp; Drift Simulator</li>
-          </ul>
-        </div>
-        <a href="https://streamlit.app" target="_blank" class="card-link">Launch HealthTech Engine →</a>
+    <div class="card">
+      <div>
+        <span class="tag sk">03 • Training &amp; IP</span>
+        <h3>🎓 Clinical Data Training</h3>
+        <p>Interactive sandboxes and plain-English books for healthcare teams.</p>
+        <ul>
+          <li>✓ No-Code Browser Simulation Labs</li>
+          <li>✓ <em>Simplifying Data Analytics to a Toddler</em></li>
+          <li>✓ SHA-256 Verified Credentials</li>
+          <li>✓ Hospital &amp; University Licensing</li>
+        </ul>
       </div>
+      <a href="https://techyatchlab.com" target="_blank">Explore Training Labs →</a>
+    </div>
+  </div>
+</section>
 
-      <div class="saas-card">
-        <div>
-          <span class="tag t-am">02 • Recruitment &amp; HR</span>
-          <h3>👩‍⚕️ Healthcare Recruitment &amp; Staffing</h3>
-          <p>Data-backed workforce planning and clinical recruitment solutions to eliminate shift shortages.</p>
-          <ul>
-            <li>✓ Flex vs. Agency Nurse Shift Optimization</li>
-            <li>✓ Safe Patient-to-Nurse Capacity Guardrails</li>
-            <li>✓ Clinical Talent Sourcing &amp; Retention Analytics</li>
-            <li>✓ Custom Ward Roster CSV Simulation</li>
-          </ul>
-        </div>
-        <a href="https://streamlit.app" target="_blank" class="card-link">Open Workforce &amp; HR Suite →</a>
-      </div>
+<footer>
+  <p>&copy; 2026 <strong>TWEVIX CARE™</strong> by <strong>Twevix™</strong> • <a href="https://streamlit.app" target="_blank">TWEVIX CARE™ App</a> • <a href="https://techyatchlab.com" target="_blank">TechYatch Lab™</a></p>
+</footer>
 
-      <div class="saas-card">
-        <div>
-          <span class="tag t-sk">03 • Training &amp; IP</span>
+<script>
+const data={
+  tech:{t:"TWEVIX CARE™ Clinical Decision-Intelligence",d:"Ingest anonymized clinic CSV logs to forecast 14-day patient surges, catch cold-chain and billing anomalies with ML, audit triage fairness, and model 36-month board AI ROI.",b:"Open HealthTech App →",u:"https://streamlit.app"},
+  rec:{t:"Smart Clinical Recruitment & Roster Optimization",d:"Forecast high-demand clinical shifts ahead of time, reduce expensive agency nurse overspending, and align healthcare recruitment to safe patient ratios.",b:"Launch Workforce Suite →",u:"https://streamlit.app"},
+  trn:{t:"Applied Clinical Data & AI Upskilling",d:"Train nurses, clinic managers, and healthcare students using plain-English books and browser simulations with SHA-256 verified credentials.",b:"Enter Training Labs →",u:"https://techyatchlab.com"}
+};
+function pick(k){
+  document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
+  document.getElementById('b-'+k).classList.add('active');
+  document.getElementById('p-title').textContent=data[k].t;
+  document.getElementById('p-desc').textContent=data[k].d;
+  const a=document.getElementById('p-btn');a.textContent=data[k].b;a.href=data[k].u;
+}
+</script>
+</body>
+</html>

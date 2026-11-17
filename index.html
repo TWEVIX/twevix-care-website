@@ -1,154 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TWEVIX CARE™ | Data-Driven Care Solutions • HealthTech, Workforce & Training</title>
-  <link rel="icon" type="image/png" href="twevixcare_logo.png" />
-  <script src="https://tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TWEVIX CARE™ | Data-Driven Care Solutions • HealthTech, Workforce &amp; Training</title>
+<link rel="icon" type="image/png" href="twevixcare_logo.png" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#020617;color:#f8fafc;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{border-bottom:1px solid #1e293b;background:rgba(2,6,23,.95);position:sticky;top:0;z-index:50}
+.nav{max-width:960px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px}
+.brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1.5px solid #34d399}
+.mint{color:#34d399}
+.sub{font-size:11px;font-weight:500;color:#94a3b8;letter-spacing:.5px}
+.links{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:600;color:#cbd5e1}
+.links a:hover{color:#34d399}
+.pill-cta{background:#10b981;color:#020617!important;font-weight:700;padding:8px 18px;border-radius:999px}
+main{max-width:960px;margin:0 auto;padding:56px 24px}
+.hero{text-align:center;margin-bottom:48px}
+.badge{display:inline-block;background:rgba(16,185,129,.12);border:1px solid rgba(52,211,153,.35);color:#6ee7b7;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:6px 16px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.15;margin-bottom:16px}
+.lead{color:#94a3b8;font-size:18px;max-width:680px;margin:0 auto 28px}
+.tabs{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.tab{font-weight:700;font-size:15px;padding:12px 22px;border-radius:12px;border:2px solid transparent;cursor:pointer}
+.tab-tech{background:#10b981;color:#020617}
+.tab-rec{background:#fbbf24;color:#020617}
+.tab-trn{background:#38bdf8;color:#020617}
+.tab.active{border-color:#ffffff;box-shadow:0 0 20px rgba(255,255,255,.2)}
+.box{background:#0f172a;border:1px solid #1e293b;border-radius:16px;padding:28px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;text-align:left}
+.box-hi{border-color:rgba(52,211,153,.45)}
+.box-text{max-width:600px}
+.tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.t-em{background:rgba(16,185,129,.15);color:#6ee7b7}
+.t-am{background:rgba(251,191,36,.15);color:#fcd34d}
+.t-sk{background:rgba(56,189,248,.15);color:#7dd3fc}
+.box h2,.box h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.box p{color:#94a3b8;font-size:15px}
+.btn{display:inline-block;background:#1e293b;border:1px solid #334155;color:#f8fafc;font-weight:700;font-size:14px;padding:12px 22px;border-radius:12px;white-space:nowrap}
+.btn-em{background:#10b981;border-color:#10b981;color:#020617}
+.btn:hover{opacity:.9}
+footer{border-top:1px solid #1e293b;padding:32px 24px;text-align:center;font-size:14px;color:#94a3b8}
+footer a{color:#34d399;font-weight:600}
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<body>
 
-  <!-- Top Navigation -->
-  <header class="border-b border-slate-800 bg-slate-950/95 sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-4">
-      <div class="flex items-center gap-3 font-extrabold text-xl">
-        <img src="twevixcare_logo.png" alt="TWEVIX CARE Logo" style="width:42px; height:42px; border-radius:50%; object-fit:cover;" class="w-10 h-10 rounded-full border border-emerald-400" />
-
-        <div>
-          <span>TWEVIX <span class="text-emerald-400">CARE™</span></span>
-          <div class="text-[11px] font-medium text-slate-400 tracking-wide">PEOPLE • DATA • INNOVATION • IMPACT</div>
-        </div>
-      </div>
-      <div class="flex items-center gap-5 text-sm font-semibold text-slate-300">
-        <a href="#pillars" class="hover:text-emerald-400">Solutions</a>
-        <a href="mailto:care@twevix.com" class="hover:text-emerald-400">care@twevix.com</a>
-        <a href="https://streamlit.app" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-full">
-          Launch Platform →
-        </a>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="twevixcare_logo.png" alt="TWEVIX CARE Logo" />
+      <div>
+        <div>TWEVIX <span class="mint">CARE™</span></div>
+        <div class="sub">PEOPLE • DATA • INNOVATION • IMPACT</div>
       </div>
     </div>
-  </header>
+    <div class="links">
+      <a href="#pillars">Solutions</a>
+      <a href="mailto:care@twevix.com">care@twevix.com</a>
+      <a href="https://streamlit.app" target="_blank" class="pill-cta">Launch Platform →</a>
+    </div>
+  </div>
+</header>
 
-  <main class="max-w-4xl mx-auto px-6 py-14 space-y-12">
+<main>
+  <section class="hero">
+    <div class="badge">By Twevix™ • Proprietary Clinical &amp; Workforce Intelligence</div>
+    <h1>Data-Driven Care Solutions: <span class="mint">Improving Care Through Technology &amp; Insights</span></h1>
+    <p class="lead"><strong>TWEVIX CARE™</strong> delivers scalable, no-code predictive intelligence across three integrated healthcare verticals—combining proprietary machine learning software, data-driven clinical staffing, and accredited workforce training.</p>
 
-    <!-- Hero & Interactive Pathway Selector -->
-    <section class="text-center space-y-6">
-      <span class="inline-block bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
-        By Twevix™ • Proprietary Clinical &amp; Workforce Intelligence
-      </span>
-      <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
-        Data-Driven Care Solutions: <span class="text-emerald-400">Improving Care Through Technology &amp; Insights</span>
-      </h1>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-        <strong>TWEVIX CARE™</strong> delivers scalable, no-code predictive intelligence across three integrated healthcare verticals—combining proprietary machine learning software, data-driven clinical staffing, and accredited workforce training.
-      </p>
+    <div class="tabs">
+      <button onclick="setMode('tech')" id="btn-tech" class="tab tab-tech active">🏥 HealthTech Software</button>
+      <button onclick="setMode('rec')" id="btn-rec" class="tab tab-rec">👩‍⚕️ Healthcare Recruitment</button>
+      <button onclick="setMode('trn')" id="btn-trn" class="tab tab-trn">🎓 Clinical Data Training</button>
+    </div>
 
-      <!-- Client Selector Buttons -->
-      <div class="flex justify-center gap-3 flex-wrap pt-2">
-        <button onclick="setMode('tech')" id="btn-tech" class="bg-emerald-500 text-slate-950 font-bold px-6 py-3 rounded-xl ring-2 ring-white transition">
-          🏥 HealthTech Software
-        </button>
-        <button onclick="setMode('rec')" id="btn-rec" class="bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl opacity-90 hover:opacity-100 transition">
-          👩‍⚕️ Healthcare Recruitment
-        </button>
-        <button onclick="setMode('trn')" id="btn-trn" class="bg-sky-400 text-slate-950 font-bold px-6 py-3 rounded-xl opacity-90 hover:opacity-100 transition">
-          🎓 Clinical Data Training
-        </button>
+    <div class="box box-hi">
+      <div class="box-text">
+        <div id="box-tag" class="tag t-em">01 • Proprietary HealthTech Engine</div>
+        <h2 id="box-title">Predictive Clinical Operations &amp; Governance AI</h2>
+        <p id="box-desc">Built with Holt-Winters time-series forecasting, IsolationForest anomaly detection, and algorithmic fairness auditing—enabling healthcare providers to prevent 4-hour wait breaches, safeguard cold-chain compliance, and quantify 36-month AI ROI.</p>
       </div>
+      <a id="box-link" href="https://streamlit.app" target="_blank" class="btn btn-em">Launch Engine →</a>
+    </div>
+  </section>
 
-      <!-- Active Selection Spotlight Box -->
-      <div class="bg-slate-900 border border-emerald-400/40 rounded-2xl p-6 sm:p-8 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div class="space-y-2">
-          <div id="box-tag" class="text-xs font-extrabold uppercase tracking-wider text-emerald-400">01 • Proprietary HealthTech Engine</div>
-          <h2 id="box-title" class="text-2xl font-bold">Predictive Clinical Operations &amp; Governance AI</h2>
-          <p id="box-desc" class="text-slate-300 text-sm sm:text-base">
-            Built with Holt-Winters time-series forecasting, IsolationForest anomaly detection, and algorithmic fairness auditing—enabling healthcare providers to prevent 4-hour wait breaches, safeguard cold-chain compliance, and quantify 36-month AI ROI.
-          </p>
-        </div>
-        <a id="box-link" href="https://streamlit.app" target="_blank" class="shrink-0 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-xl">
-          Launch Engine →
-        </a>
+  <section id="pillars">
+    <div class="box">
+      <div class="box-text">
+        <span class="tag t-em">01 • Scalable HealthTech IP</span>
+        <h3>🏥 Clinical Decision-Intelligence Software</h3>
+        <p>No-code cloud architecture allowing hospitals and clinics to ingest anonymized operational data for 14-day surge prediction, automated billing/cold-chain ML audits, demographic triage equity governance, and MLOps drift modeling.</p>
       </div>
-    </section>
+      <a href="https://streamlit.app" target="_blank" class="btn">Open HealthTech →</a>
+    </div>
 
-    <!-- Stacked Service Boxes -->
-    <section id="pillars" class="space-y-6">
-
-      <!-- Box 1: HealthTech -->
-      <div class="bg-slate-900 border border-slate-800 hover:border-emerald-400/50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition">
-        <div class="space-y-2 max-w-xl">
-          <span class="inline-block text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300">01 • Scalable HealthTech IP</span>
-          <h3 class="text-2xl font-bold">🏥 Clinical Decision-Intelligence Software</h3>
-          <p class="text-slate-400 text-sm sm:text-base">
-            No-code cloud architecture allowing hospitals and clinics to ingest anonymized operational data for 14-day surge prediction, automated billing/cold-chain ML audits, demographic triage equity governance, and MLOps drift modeling.
-          </p>
-        </div>
-        <a href="https://streamlit.app" target="_blank" class="shrink-0 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 border border-slate-700 font-bold px-5 py-3 rounded-xl transition">
-          Open HealthTech →
-        </a>
+    <div class="box">
+      <div class="box-text">
+        <span class="tag t-am">02 • Workforce Analytics &amp; Recruitment</span>
+        <h3>👩‍⚕️ Predictive Clinical Staffing &amp; Recruitment</h3>
+        <p>Eliminating reactive agency overspending through demand-driven clinical recruitment—matching nurse and care-worker deployment directly to forecasted patient surges while enforcing safe staff-to-patient guardrails.</p>
       </div>
+      <a href="mailto:care@://twevix.com" class="btn">Partner With Us →</a>
+    </div>
 
-      <!-- Box 2: Healthcare Recruitment -->
-      <div class="bg-slate-900 border border-slate-800 hover:border-amber-400/50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition">
-        <div class="space-y-2 max-w-xl">
-          <span class="inline-block text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-amber-500/15 text-amber-300">02 • Workforce Analytics &amp; Recruitment</span>
-          <h3 class="text-2xl font-bold">👩‍⚕️ Predictive Clinical Staffing &amp; Recruitment</h3>
-          <p class="text-slate-400 text-sm sm:text-base">
-            Eliminating reactive agency overspending through demand-driven clinical recruitment—matching nurse and care-worker deployment directly to forecasted patient surges while enforcing safe staff-to-patient guardrails.
-          </p>
-        </div>
-        <a href="mailto:care@://twevix.com" class="shrink-0 bg-slate-800 hover:bg-amber-400 hover:text-slate-950 border border-slate-700 font-bold px-5 py-3 rounded-xl transition">
-          Partner With Us →
-        </a>
+    <div class="box">
+      <div class="box-text">
+        <span class="tag t-sk">03 • Clinical Data Literacy &amp; IP</span>
+        <h3>🎓 Applied Healthcare Analytics Training</h3>
+        <p>Bridging the digital skills gap in frontline care through interactive decision sandboxes and published frameworks—equipping clinicians, ward managers, and healthcare leaders to interpret predictive insights responsibly.</p>
       </div>
+      <a href="mailto:care@://twevix.com" class="btn">Book Training →</a>
+    </div>
 
-      <!-- Box 3: Clinical Training -->
-      <div class="bg-slate-900 border border-slate-800 hover:border-sky-400/50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition">
-        <div class="space-y-2 max-w-xl">
-          <span class="inline-block text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-sky-500/15 text-sky-300">03 • Clinical Data Literacy &amp; IP</span>
-          <h3 class="text-2xl font-bold">🎓 Applied Healthcare Analytics Training</h3>
-          <p class="text-slate-400 text-sm sm:text-base">
-            Bridging the digital skills gap in frontline care through interactive decision sandboxes and published frameworks—equipping clinicians, ward managers, and healthcare leaders to interpret predictive insights responsibly.
-          </p>
-        </div>
-        <a href="mailto:care@://twevix.com" class="shrink-0 bg-slate-800 hover:bg-sky-400 hover:text-slate-950 border border-slate-700 font-bold px-5 py-3 rounded-xl transition">
-          Book Training →
-        </a>
+    <div class="box">
+      <div class="box-text">
+        <span class="tag t-em">Founder &amp; Lead Product Architect</span>
+        <h3>Willa Abraham • MSc Data Science for Business (University of Stirling, UK)</h3>
+        <p>Combining 5+ years of UK frontline healthcare operational experience with applied machine learning engineering and co-authored technical publications to build high-impact digital health infrastructure.</p>
       </div>
+      <a href="https://github.com" target="_blank" class="btn">Inspect GitHub IP →</a>
+    </div>
+  </section>
+</main>
 
-    </section>
+<footer>
+  <p><strong>TWEVIX CARE™</strong> by <strong>Twevix™</strong> • People • Data • Innovation • Impact</p>
+  <p style="margin-top:6px">Direct Inquiries: <a href="mailto:care@twevix.com">care@twevix.com</a> • <a href="https://streamlit.app" target="_blank">Live Clinical Engine</a></p>
+</footer>
 
-    <!-- Founder & Technical Credentials Strip -->
-    <section class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-      <div class="space-y-2 max-w-2xl">
-        <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-400">Founder &amp; Lead Product Architect</div>
-        <h3 class="text-xl font-bold">Willa Abraham • MSc Data Science for Business (University of Stirling, UK)</h3>
-        <p class="text-slate-400 text-sm">
-          Combining 5+ years of UK frontline healthcare operational experience with applied machine learning engineering and co-authored technical publications to build high-impact digital health infrastructure.
-        </p>
-      </div>
-      <a href="https://github.com" target="_blank" class="shrink-0 bg-slate-800 hover:border-emerald-400 border border-slate-700 text-sm font-bold px-5 py-3 rounded-xl">
-        Inspect GitHub IP →
-      </a>
-    </section>
+<script>
+const modes={
+  tech:{tag:"01 • Proprietary HealthTech Engine",title:"Predictive Clinical Operations & Governance AI",desc:"Built with Holt-Winters time-series forecasting, IsolationForest anomaly detection, and algorithmic fairness auditing—enabling healthcare providers to prevent 4-hour wait breaches, safeguard cold-chain compliance, and quantify 36-month AI ROI.",btn:"Launch Engine →",url:"https://streamlit.app"},
+  rec:{tag:"02 • Workforce Analytics & Recruitment",title:"Data-Driven Clinical Recruitment & Shift Optimization",desc:"Align clinical staffing and healthcare recruitment directly with 14-day patient demand forecasts—cutting agency nurse overspending while protecting safe staff-to-patient ratios.",btn:"Inquire About Staffing →",url:"mailto:care@://twevix.com"},
+  trn:{tag:"03 • Clinical Data Literacy & IP",title:"Executive & Frontline Healthcare Analytics Upskilling",desc:"Empower nurses, clinic directors, and care teams to make evidence-based decisions using no-code simulation environments and structured plain-English analytics curricula.",btn:"Request Cohort Training →",url:"mailto:care@://twevix.com"}
+};
+function setMode(k){
+  ['tech','rec','trn'].forEach(id=>document.getElementById('btn-'+id).classList.remove('active'));
+  document.getElementById('btn-'+k).classList.add('active');
+  document.getElementById('box-tag').textContent=modes[k].tag;
+  document.getElementById('box-title').textContent=modes[k].title;
+  document.getElementById('box-desc').textContent=modes[k].desc;
+  const a=document.getElementById('box-link');a.textContent=modes[k].btn;a.href=modes[k].url;
+}
+</script>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-400 space-y-2">
-    <p><strong class="text-white">TWEVIX CARE™</strong> by <strong class="text-white">Twevix™</strong> • People • Data • Innovation • Impact</p>
-    <p>Direct Inquiries: <a href="mailto:care@twevix.com" class="text-emerald-400 font-semibold">care@twevix.com</a> • <a href="https://streamlit.app" target="_blank" class="text-emerald-400 font-semibold">Live Clinical Engine</a></p>
-  </footer>
-
-  <script>
-    const modes = {
-      tech: {
-        tag: "01 • Proprietary HealthTech Engine",
-        title: "Predictive Clinical Operations & Governance AI",
-        desc: "Built with Holt-Winters time-series forecasting, IsolationForest anomaly detection, and algorithmic fairness auditing—enabling healthcare providers to prevent 4-hour wait breaches, safeguard cold-chain compliance, and quantify 36-month AI ROI.",
-        btn: "Launch Engine →",
-        url: "https://streamlit.app"
-      },
-      rec: {
-        tag: "02 • Workforce Analytics & Recruitment",
+</body>
+</html>

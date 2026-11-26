@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twevix Care™ | Polyclinic Surge & Cold-Chain Audit Kit</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://googleapis.com" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      line-height: 1.6;
+    }
+    header {
+      background: #0B192C;
+      color: #FFFFFF;
+      padding: 18px 24px;
+      border-bottom: 1px solid #1E293B;
+    }
+    .nav-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #38BDF8;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0B192C 0%, #132743 100%);
+      color: #FFFFFF;
+      padding: 48px 24px 56px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      max-width: 780px;
+      margin: 0 auto 14px;
+      line-height: 1.2;
+    }
+    .hero p {
+      color: #CBD5E1;
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 15.5px;
+    }
+    .container {
+      max-width: 1120px;
+      margin: -28px auto 60px;
+      padding: 0 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1.5px solid #BAE6FD;
+      border-top: 4px solid #0284C7;
+      border-radius: 16px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+    }
+    .card-amber {
+      border-color: #FDE68A;
+      border-top-color: #D97706;
+    }
+    .tag {
+      display: inline-block;
+      background: #E0F2FE;
+      color: #0369A1;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .tag-amber {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+    .card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18.5px;
+      color: #0B192C;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 13.5px;
+      color: #475569;
+      margin-bottom: 18px;
+    }
+    .schema-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-family: monospace;
+      font-size: 11.5px;
+      color: #334155;
+      margin-bottom: 18px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #0B192C;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .btn:hover { background: #1E293B; }
+    .btn-cyan {
+      background: #0284C7;
+    }
+    .btn-cyan:hover { background: #0369A1; }
+    .sop-panel {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 32px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+    }
+    .sop-panel h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 21px;
+      color: #0B192C;
+      margin-bottom: 14px;
+    }
+    .sop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .sop-item {
+      background: #F8FAFC;
+      border-left: 4px solid #0284C7;
+      padding: 14px 16px;
+      border-radius: 0 10px 10px 0;
+      font-size: 13.5px;
+    }
+    footer {
+      background: #0B192C;
+      color: #94A3B8;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Twevix Care Logo" />
+      <span>TWEVIX <span style="color:#38BDF8;">CARE™</span></span>
+    </a>
+    <a href="index.html" style="color:#CBD5E1;text-decoration:none;font-size:13.5px;font-weight:600;">← Back to Twevix Care™ Home</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="badge">✔ UNLOCKED • CLINICAL OPS STARTER BUNDLE</span>
+  <h1>Polyclinic Surge &amp; Cold-Chain Audit Kit</h1>
+  <p>Download your anonymized schema templates, cold-chain excursion checklist, and multilingual patient survey scripts—ready to upload directly into the Twevix Care™ Intelligence Sandbox.</p>
+</section>
+
+<div class="container">
+  <div class="grid">
+    <!-- ITEM 1 -->
+    <div class="card">
+      <div>
+        <span class="tag">ASSET 01 • ENGINE 01 TEMPLATE</span>
+        <h3>OPD Patient-Flow &amp; Roster CSV</h3>
+        <p>Anonymized 30-day sample dataset with exact column headers required for 14-day outpatient surge forecasting and shift roster optimization.</p>
+        <div class="schema-box">date, department, opd_arrivals, nurses_on_duty, avg_wait_mins</div>
+      </div>
+      <button class="btn" onclick="downloadOPD()">⬇️ Download OPD Surge CSV</button>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="card card-amber">
+      <div>
+        <span class="tag tag-amber">ASSET 02 • ENGINE 02 TEMPLATE</span>
+        <h3>Cold-Chain &amp; Billing Audit CSV</h3>
+        <p>Pre-structured vaccine fridge temperature log (2°C–8°C) and claim anomaly schema for IsolationForest drift &amp; leakage detection.</p>
+        <div class="schema-box">timestamp, unit_id, temp_celsius, claim_amount_rwf, status</div>
+      </div>
+      <button class="btn" onclick="downloadColdChain()">⬇️ Download Cold-Chain CSV</button>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="card">
+      <div>
+        <span class="tag">ASSET 03 • ENGINE 05 SCRIPTS</span>
+        <h3>Multilingual Patient Survey Pack</h3>
+        <p>Validated outpatient exit-survey prompts and sample feedback CSV across Kinyarwanda, French, Swahili &amp; English for triage sentiment NLP.</p>
+        <div class="schema-box">feedback_id, language, department, patient_comment</div>
+      </div>
+      <button class="btn" onclick="downloadSurvey()">⬇️ Download Multilingual CSV</button>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="card card-amber">
+      <div>
+        <span class="tag tag-amber">ASSET 04 • LIVE CLOUD SANDBOX</span>
+        <h3>Twevix Care™ 6-Engine App</h3>
+        <p>Upload any of the three CSV templates above into the live cloud sandbox to generate clinical charts and SHA-256 audit receipts.</p>
+        <div class="schema-box">Status: Online • Zero Raw PII Stored</div>
+      </div>
+      <a href="https://twevix-care.streamlit.app/" target="_blank" class="btn btn-cyan">Launch Cloud Sandbox →</a>
+    </div>
+  </div>
+
+  <!-- COLD-CHAIN SOP CHECKLIST -->
+  <div class="sop-panel">
+    <h2>📋 Quick-Reference Cold-Chain &amp; Data Anonymization SOP Checklist</h2>
+    <p style="font-size:14px;color:#475569;">Follow these four standard operating checks before uploading clinic records into Twevix Care™:</p>
+    <div class="sop-grid">
+      <div class="sop-item">
+        <strong>1. Strip All Direct Patient Identifiers:</strong><br/>
+        Remove patient names, national IDs, phone numbers, and street addresses. Use anonymized visit codes (e.g., <code>VST-1042</code>) only.
+      </div>
+      <div class="sop-item">
+        <strong>2. Standardize Cold-Chain Logging Intervals:</strong><br/>
+        Record vaccine &amp; reagent refrigerator temperatures at minimum every 4 hours (06:00, 10:00, 14:00, 18:00, 22:00) in Celsius.
+      </div>
+      <div class="sop-item">
+        <strong>3. Flag Excursion Thresholds (&lt;2.0°C or &gt;8.0°C):</strong><br/>
+        Any sustained reading outside <code>2.0°C – 8.0°C</code> triggers an IsolationForest anomaly alert and requires quarantine inspection.
+      </div>
+      <div class="sop-item">
+        <strong>4. Mint Cryptographic Audit Receipts:</strong><br/>
+        Export your <code>TVX-CARE-</code> SHA-256 receipt after each monthly audit and verify authenticity anytime on <strong>TWEVIX PULSE™</strong>.
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Twevix Care™ • Clinical Decision-Intelligence &amp; Governance Architecture (UK &amp; Rwanda) • Audited by TWEVIX PULSE™
+</footer>
+
+<script>
+  function triggerDownload(filename, content) {
+    const blob = new Blob([content], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function downloadOPD() {
+    const csv = [
+      "date,department,opd_arrivals,nurses_on_duty,avg_wait_mins",
+      "2026-10-01,General OPD,142,8,34",
+      "2026-10-02,General OPD,156,8,39",
+      "2026-10-03,Pediatrics,98,6,28",

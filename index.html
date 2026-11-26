@@ -13,18 +13,13 @@
       --bg-primary: #070d19;
       --bg-secondary: #0d1629;
       --bg-card: #111d35;
-      --bg-card-hover: #162544;
       --border-subtle: rgba(148, 163, 184, 0.16);
       --border-accent: rgba(20, 184, 166, 0.45);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --text-dim: #64748b;
       --teal: #14b8a6;
-      --teal-glow: rgba(20, 184, 166, 0.18);
       --cyan: #38bdf8;
       --emerald: #10b981;
-      --amber: #f59e0b;
-      --rose: #f43f5e;
       --radius-lg: 16px;
       --radius-md: 10px;
       --radius-sm: 6px;
@@ -66,7 +61,6 @@
       padding: 0 24px;
     }
 
-    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -118,12 +112,11 @@
       font-size: 0.85rem;
     }
 
-    /* Navigation */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(7, 13, 25, 0.85);
+      background: rgba(7, 13, 25, 0.88);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
     }
@@ -183,7 +176,6 @@
       flex-wrap: wrap;
     }
 
-    /* Hero Section */
     .hero {
       padding: 64px 0 56px;
     }
@@ -259,7 +251,6 @@
       display: none;
     }
 
-    /* Interactive Sandbox Card */
     .sandbox-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border-subtle);
@@ -438,9 +429,21 @@
       text-decoration: underline;
     }
 
-    /* NLP Controls */
     .form-select, .form-textarea, .form-input {
       width: 100%;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       color: var(--text-main);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      margin-bottom: 12px;
+    }
+
+    .form-select:focus, .form-textarea:focus, .form-input:focus {
+      outline: none;
+      border-color: var(--teal);
+    }
+
+    .nlp-actions {

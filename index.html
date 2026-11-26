@@ -11,7 +11,7 @@
     --bg:#05111E;
     --card:#0B1D32;
     --card-alt:#102844;
-    --border:rgba(255,255,255,0.1);
+    --border:rgba(255,255,255,0.12);
     --emerald:#10B981;
     --emerald-bright:#34D399;
     --amber:#F59E0B;
@@ -28,11 +28,9 @@
   a{text-decoration:none;color:inherit}
   .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"JetBrains Mono",monospace}
 
-  /* Header */
   header{
     border-bottom:1px solid var(--border);
-    background:rgba(5,17,30,0.95);
-    backdrop-filter:blur(10px);
+    background:rgba(5,17,30,0.96);
     position:sticky;
     top:0;
     z-index:50;
@@ -57,10 +55,12 @@
   .btn-nav-outline{
     border:1px solid rgba(52,211,153,0.4);
     color:var(--emerald-bright);
+    background:transparent;
     padding:8px 14px;
     border-radius:10px;
     font-size:13px;
     font-weight:700;
+    cursor:pointer;
   }
   .btn-nav-solid{
     background:var(--emerald);
@@ -71,7 +71,6 @@
     font-weight:800;
   }
 
-  /* Layout */
   main{max-width:1180px;margin:0 auto;padding:44px 24px 72px}
   section{margin-bottom:64px}
   .eyebrow{
@@ -90,7 +89,6 @@
     margin-bottom:16px;
   }
 
-  /* Split Hero */
   .hero-grid{
     display:grid;
     grid-template-columns:1.15fr 0.95fr;
@@ -123,7 +121,6 @@
   .btn-am{background:var(--amber);border-color:var(--amber);color:#05111E;font-weight:800}
   .hero-note{font-size:12.5px;color:var(--muted)}
 
-  /* Live Browser Sandbox */
   .browser-card{
     background:var(--card);
     border:1px solid rgba(52,211,153,0.35);
@@ -202,7 +199,7 @@
     padding:12px;
   }
   .metric-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-  .metric-val{font-size:18px;font-weight:800;color:var(--emerald-bright);margin-top:2px}
+  .metric-val{font-size:17px;font-weight:800;color:var(--emerald-bright);margin-top:2px}
   .nlp-select, .nlp-input{
     width:100%;
     background:#05111E;
@@ -228,12 +225,10 @@
     margin-bottom:14px;
   }
 
-  /* Section Headings */
   .sec-head{margin-bottom:24px}
   .sec-head h2{font-size:clamp(22px,3vw,30px);font-weight:800;margin-bottom:6px}
   .sec-head p{color:var(--muted);font-size:15px;max-width:760px}
 
-  /* Grids */
   .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
   .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
   .card{
@@ -255,7 +250,6 @@
   .card ul li{font-size:14px;color:#cbd5e1;margin-bottom:10px;padding-left:18px;position:relative}
   .card ul li::before{content:"•";color:var(--emerald-bright);font-weight:900;position:absolute;left:0}
 
-  /* Lead Magnet Banner */
   .kit-banner{
     background:linear-gradient(135deg,#0B1D32 0%,#102A45 100%);
     border:1px solid rgba(245,158,11,0.4);
@@ -271,7 +265,6 @@
   .kit-text h3{font-size:22px;font-weight:800;margin:8px 0}
   .kit-text p{color:#cbd5e1;font-size:14.5px}
 
-  /* Pulse Verification Banner */
   .pulse-banner{
     background:var(--card);
     border:1px solid rgba(52,211,153,0.4);
@@ -284,7 +277,6 @@
     gap:20px;
   }
 
-  /* Footer */
   footer{
     border-top:1px solid var(--border);
     background:#030B14;
@@ -302,7 +294,6 @@
   }
   .eco-links a{color:var(--emerald-bright);font-weight:700}
 
-  /* Modal */
   .modal-backdrop{
     display:none;
     position:fixed;
@@ -341,3 +332,8 @@
       <img src="twevixcare_logo.png" alt="TWEVIX CARE Logo" />
       <div>
         <div>TWEVIX <span class="mint">CARE™</span></div>
+        <div class="sub">by TWEVIX Z LTD • Clinical AI, Workforce &amp; Governance</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="#pathways">Clinical Pathways</a>

@@ -273,14 +273,15 @@
           <p style="font-size:14px;color:#CBD5E1">Unlock anonymized OPD patient-flow CSV templates, cold-chain excursion checklists, multilingual patient survey scripts, and instant cloud sandbox access.</p>
         </div>
       </div>
-      <form class="toolkit-form" onsubmit="claimKit(event)">
-        <div class="form-row">
-          <input type="text" class="input" placeholder="Your Name / Clinic" required />
-          <input type="email" class="input" placeholder="Work Email" required />
-        </div>
-        <button type="submit" class="btn btn-amber" style="width:100%">🎁 Unlock Free Clinic Audit Kit Now →</button>
-        <div id="kit-msg" style="display:none;margin-top:8px;font-size:12px;color:#6EE7B7;font-weight:700">✔ Sent! Check your inbox for your Clinic Audit Kit &amp; Sandbox Link.</div>
-      </form>
+              <form class="toolkit-form" onsubmit="claimKit(event)">
+          <div class="form-row">
+            <input type="text" id="kitName" class="input" placeholder="Your Name / Clinic" required />
+            <input type="email" id="kitEmail" class="input" placeholder="Work Email" required />
+          </div>
+          <button type="submit" class="btn btn-amber" style="width:100%">🎁 Unlock Free Clinic Audit Kit Now →</button>
+          <div id="kit-msg" style="display:none;margin-top:8px;font-size:12px;color:#6EE7B7;font-weight:700">✓ Sent! Opening your Google Drive Audit Kit folder...</div>
+        </form>
+
     </div>
   </div>
 </section>

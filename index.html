@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Twevix Care™ | Applied Data & AI Training, 3-Month Internships & Tech Hiring</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Twevix Care™ | Predictive Clinical Time-Series, Multilingual NLP &amp; Workforce Intelligence</title>
+  <link rel="icon" type="image/png" href="twevixcare_logo.png" />
   <style>
     :root {
       --navy: #0B192C;
@@ -27,17 +27,15 @@
 
     /* NAVBAR */
     header { position: sticky; top: 0; z-index: 100; background: rgba(11, 25, 44, 0.97); color: #fff; border-bottom: 1px solid #1E293B; }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 12px; }
     .brand { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
-    .brand img { height: 44px; width: auto; background: transparent; border-radius: 0; padding: 0; object-fit: contain; }
-
+    .brand img { height: 44px; width: auto; object-fit: contain; }
     .brand-title { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; display: block; line-height: 1.1; }
     .brand-title span { color: var(--cyan-light); }
     .brand-sub { font-size: 10px; color: #94A3B8; display: block; }
     .nav-links { display: flex; gap: 16px; font-size: 13px; font-weight: 500; color: #CBD5E1; white-space: nowrap; }
     .nav-links a:hover { color: #fff; }
     .nav-actions { display: flex; gap: 8px; align-items: center; white-space: nowrap; }
-
 
     /* BUTTONS */
     .btn { display: inline-block; padding: 11px 18px; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer; border: none; transition: 0.2s; text-align: center; }
@@ -53,40 +51,41 @@
 
     /* HERO */
     .hero { background: var(--navy); color: #fff; padding: 56px 0 72px; border-bottom: 1px solid #1E293B; }
-    .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
     .pill { display: inline-block; background: var(--navy-light); border: 1px solid rgba(56, 189, 248, 0.35); color: #7DD3FC; font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 18px; }
-    .hero h1 { font-size: 42px; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
+    .hero h1 { font-size: 40px; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
     .hero h1 span { color: var(--cyan-light); }
-    .hero p { font-size: 17px; color: #CBD5E1; margin-bottom: 24px; max-width: 620px; }
+    .hero p { font-size: 16.5px; color: #CBD5E1; margin-bottom: 24px; max-width: 620px; }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
     .hero-note { font-size: 12px; color: #94A3B8; }
 
     /* SANDBOX CARD */
-    .sandbox-card { background: var(--navy-light); border: 1px solid #334155; border-radius: 16px; padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
-    .sandbox-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 12px; margin-bottom: 16px; font-size: 12px; }
+    .sandbox-card { background: var(--navy-light); border: 1px solid #334155; border-radius: 16px; padding: 22px; box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
+    .sandbox-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 12px; margin-bottom: 14px; font-size: 12px; }
     .dots { display: flex; align-items: center; gap: 6px; color: #94A3B8; font-family: monospace; }
     .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
     .badge-live { background: rgba(16, 185, 129, 0.2); color: #6EE7B7; padding: 3px 8px; border-radius: 6px; font-family: monospace; font-weight: 700; font-size: 11px; }
-    .sim-box { background: var(--navy); border: 1px solid #334155; border-radius: 12px; padding: 16px; margin: 14px 0; }
-    .sim-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; }
+    .sb-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
+    .sb-tab { background: var(--navy); border: 1px solid #334155; color: #94A3B8; padding: 8px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; }
+    .sb-tab.active { border-color: var(--cyan-light); color: #fff; background: rgba(56, 189, 248, 0.12); }
+    .sim-box { background: var(--navy); border: 1px solid #334155; border-radius: 12px; padding: 15px; margin: 10px 0 14px; }
+    .sim-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
     .sim-slider { width: 100%; accent-color: var(--cyan-light); cursor: pointer; margin: 8px 0; }
-    .sha-bar { background: #07101D; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-family: monospace; color: #94A3B8; margin-bottom: 16px; }
+    .sha-bar { background: #07101D; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-family: monospace; color: #94A3B8; margin-bottom: 14px; }
 
-    /* SECTIONS */
+    /* SECTIONS & GRIDS */
     section { padding: 64px 0; }
-    .sec-head { text-align: center; max-width: 720px; margin: 0 auto 44px; }
+    .sec-head { text-align: center; max-width: 720px; margin: 0 auto 40px; }
     .sec-tag { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cyan); display: block; margin-bottom: 8px; }
-    .sec-head h2 { font-size: 32px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .sec-head h2 { font-size: 31px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
     .sec-head p { color: var(--text-muted); font-size: 15px; }
-
-    /* GRID CARDS */
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
     .card-featured { border: 2px solid var(--amber); }
     .card-tag { display: inline-block; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: #E0F2FE; color: #075985; margin-bottom: 12px; }
     .card-tag-amber { background: #FEF3C7; color: #92400E; }
-    .card h3 { font-size: 21px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .card h3 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
     .card p { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
     .check-list { list-style: none; margin-bottom: 24px; }
     .check-list li { font-size: 14px; margin-bottom: 10px; padding-left: 22px; position: relative; color: #334155; }
@@ -95,14 +94,13 @@
     /* TOOLKIT BANNER */
     .toolkit-banner { margin-top: 40px; background: linear-gradient(135deg, #0B192C 0%, #132743 100%); color: #fff; border-radius: 18px; padding: 32px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; border: 1px solid rgba(56, 189, 248, 0.3); }
     .toolkit-info { display: flex; gap: 18px; align-items: flex-start; }
-   .toolkit-info img { width: 92px; height: 92px; background: transparent; border-radius: 0; padding: 0; object-fit: contain; flex-shrink: 0; }
-
+    .toolkit-info img { width: 84px; height: 84px; object-fit: contain; flex-shrink: 0; }
     .toolkit-form { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 18px; border-radius: 14px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
     .input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 13px; color: var(--navy); background: #fff; }
     .input-dark { background: var(--navy-light); border-color: #334155; color: #fff; }
 
-    /* JOB BOARD */
+    /* JOB & DEPLOYMENT BOARD */
     .jobs-layout { display: grid; grid-template-columns: 1.8fr 1fr; gap: 28px; }
     .job-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
     .recruiter-box { background: var(--navy); color: #fff; border-radius: 16px; padding: 24px; }
@@ -110,404 +108,36 @@
 
     /* VERIFY & FOOTER */
     .verify-sec { background: #F1F5F9; border-top: 1px solid var(--border); text-align: center; }
-    .verify-box { max-width: 520px; margin: 20px auto 0; display: flex; gap: 10px; }
-    .verify-result { max-width: 520px; margin: 16px auto 0; background: #ECFDF5; border: 1px solid #6EE7B7; color: #065F46; padding: 16px; border-radius: 12px; text-align: left; font-size: 13px; display: none; }
-    footer { background: var(--navy); color: #94A3B8; padding: 36px 0; font-size: 13px; border-top: 1px solid #1E293B; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    .footer-links { display: flex; gap: 18px; color: #CBD5E1; }
+    .verify-box { max-width: 560px; margin: 20px auto 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    footer { background: var(--navy); color: #94A3B8; padding: 40px 20px; text-align: center; font-size: 13px; border-top: 1px solid #1E293B; }
+    footer a { color: var(--cyan-light); font-weight: 600; margin: 0 8px; }
 
     /* MODAL */
-    .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: none; align-items: center; justify-content: center; z-index: 200; padding: 16px; }
-    .modal-card { background: #fff; border-radius: 16px; max-width: 460px; width: 100%; padding: 24px; }
-    .modal-card .input { margin-bottom: 12px; }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(11,25,44,0.85); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal.open { display: flex; }
+    .modal-card { background: #fff; color: var(--text-main); max-width: 460px; width: 100%; border-radius: 16px; padding: 28px; position: relative; }
+    .modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text-muted); }
 
     @media (max-width: 900px) {
       .hero-grid, .grid-2, .grid-3, .toolkit-banner, .jobs-layout { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .hero h1 { font-size: 32px; }
     }
   </style>
- <!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2818391');
-</script>
-<!-- End MailerLite Universal --> 
 </head>
 <body>
 
-  <!-- TOP NAVIGATION -->
-  <header>
-    <div class="container nav-inner">
-      <a href="#" class="brand">
-      <img src="./twevixcare_logo.png?v=2" alt="Twevix Care Logo" style="height:44px; width:auto; background:transparent; border-radius:0; padding:0; object-fit:contain;" />
-
-
-        <div>
-          <span class="brand-title">Twevix  <span>Care™</span></span>
-          <span class="brand-sub">by TWEVIX Z LTD • Rwanda</span>
-        </div>
-      </a>
-      <nav class="nav-links">
-        <a href="#programs">Training & 3-Mo Internships</a>
-        <a href="#books">Book Series</a>
-        <a href="#jobs">Job Board & Recruiters</a>
-        <a href="#verify">Verify SHA-256</a>
-      </nav>
-
-            <div class="nav-actions">
-        <a href="#jobs" class="btn btn-outline btn-sm">Post a Job</a>
-
-       <a href="#toolkit" class="btn btn-amber btn-sm">🎁 Free Data Detective Kit</a>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="container hero-grid">
+<header>
+  <div class="container nav-inner">
+    <a href="#" class="brand">
+      <img src="twevixcare_logo.png" alt="Twevix Care Logo" />
       <div>
-        <div class="pill">🇷🇼 APPLIED EDTECH + HRTECH ECOSYSTEM • RWANDA & REMOTE</div>
-        <h1>Applied Data & AI Training, <span>3-Month Internships</span> & Verified Tech Hiring.</h1>
-        <p>
-          Built for <strong>university students, career changers, and working professionals</strong>. Master Python, SQL, Power BI, and AI workflows in zero-setup browser sandboxes—graduate with <strong>SHA-256 verified credentials</strong> and connect directly with hiring employers.
-        </p>
-        <div class="hero-btns">
-         <a href="#programs" class="btn btn-amber">Apply for 3-Month Internship / Training</a>
-
-         
-          <a href="#jobs" class="btn btn-outline">Recruiter: Advertise a Vacancy</a>
-        </div>
-        <div class="hero-note">
-          Open to learners, faculties & employers across Rwanda & global remote cohorts.
-        </div>
+        <span class="brand-title">Twevix <span>Care™</span></span>
+        <span class="brand-sub">by TWEVIX Z LTD • Clinical AI &amp; Workforce</span>
       </div>
-
-      <div class="sandbox-card">
-        <div class="sandbox-top">
-          <div class="dots">
-            <span class="dot" style="background:#F43F5E;"></span>
-            <span class="dot" style="background:#FBBF24;"></span>
-            <span class="dot" style="background:#10B981;"></span>
-            <span style="margin-left:6px;">techyatch-lab.streamlit.app</span>
-          </div>
-          <span class="badge-live">LIVE SANDBOX</span>
-        </div>
-        <div style="font-size:12px; font-weight:700; color:var(--cyan-light); text-transform:uppercase; margin-bottom:4px;">Interactive Decision Simulation Preview</div>
-        <h3 style="font-size:18px; margin-bottom:6px;">Case 01: SME Margin & Inventory Leak Audit</h3>
-        <p style="font-size:13px; color:#CBD5E1;">Move the slider to simulate perishable waste reduction & automated scoring:</p>
-        <div class="sim-box">
-          <div class="sim-row">
-            <span style="color:#94A3B8;">Perishable Waste Reduction:</span>
-            <strong id="simVal" style="color:var(--amber-hover); font-family:monospace;">18%</strong>
-          </div>
-          <input type="range" min="5" max="35" value="18" class="sim-slider" oninput="updateSim(this.value)" />
-          <div class="sim-row" style="border-top:1px solid #1E293B; padding-top:8px; margin-bottom:0;">
-            <span style="color:#94A3B8;">Projected Annual Profit Recovery:</span>
-            <strong id="simProfit" style="color:#34D399; font-family:monospace;">+14,400,000 RWF</strong>
-          </div>
-        </div>
-        <div class="sha-bar">
-          <span>SHA-256: TVX-2026-9F8A2C...E41B</span>
-          <span style="color:#34D399; font-weight:700;">✔ Verified</span>
-        </div>
-        <a href="https://techyatch-lab.streamlit.app/" target="_blank" rel="noopener" class="btn btn-cyan" style="width:100%;">Launch Full Cloud Sandbox →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- DUAL-TRACK PROGRAMS SECTION -->
-  <section id="programs">
-    <div class="container">
-      <div class="sec-head">
-        <span class="sec-tag">Practical EdTech Pathways</span>
-        <h2>12-Week Applied Training & 3-Month Minimum Internships</h2>
-        <p>Open to <strong>university students, career changers, and working professionals</strong>. Train and complete supervised projects directly in your browser with zero expensive local hardware required.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <div>
-            <span class="card-tag">TRACK 01 • 12 WEEKS • STUDENTS, CAREER CHANGERS & PROS</span>
-            <h3>12-Week Applied Data Science & Analytics Training</h3>
-            <p>Step-by-step cohort or self-paced training powered by our 3-series book methodology. Go from spreadsheet basics to predictive modeling and executive strategy.</p>
-            <ul class="check-list">
-              <li><strong>Weeks 1–4 (Foundations):</strong> Data cleaning, KPIs, Excel/SQL queries & visual storytelling.</li>
-              <li><strong>Weeks 5–8 (Applied Analytics):</strong> Python, Power BI/Tableau dashboards & 5-Case business simulations.</li>
-              <li><strong>Weeks 9–12 (AI & Strategy):</strong> Forecasting, churn modeling, Kinyarwanda/English NLP & capstone defense.</li>
-              <li><strong>Credential:</strong> Certificate of Applied Competence + <strong>SHA-256 Portfolio ID</strong>.</li>
-            </ul>
-          </div>
-          <a href="https://airtable.com/appXL6RD4QoKeG9fB/pagLkFzVgpzY0K0ZP/form" target="_blank" rel="noopener" class="btn btn-navy" style="width:100%;">Enroll in 12-Week Applied Training →</a>
-
-        </div>
-
-        <div class="card card-featured">
-          <div>
-            <span class="card-tag card-tag-amber">TRACK 02 • 3 MONTHS MINIMUM • ACADEMIC & WORK EXPERIENCE</span>
-            <h3>Supervised Industrial Attachment & Internship (3+ Months)</h3>
-            <p>Structured <strong>3-month minimum (12+ weeks)</strong> practical attachment for university students, graduates, career changers, and professionals building verified work portfolios.</p>
-            <ul class="check-list">
-              <li><strong>Real Business & Clinical Projects:</strong> Deliver SME margin diagnostics, healthcare forecasting, or AI annotation workflows.</li>
-              <li><strong>UK-Trained MSc Supervision:</strong> Weekly technical mentorship, code reviews, and quantitative decision grading.</li>
-              <li><strong>University Logbook & Grading:</strong> Official supervisor sign-off and automated assessment reports for academic institutions.</li>
-              <li><strong>Direct Employer Pipeline:</strong> Priority listing in the <strong>Twevix Pulse™ Talent Directory</strong> upon completion.</li>
-            </ul>
-          </div>
-          <a href="https://airtable.com/appXL6RD4QoKeG9fB/pagLkFzVgpzY0K0ZP/form" target="_blank" rel="noopener" class="btn btn-amber" style="width:100%;">Apply for 3-Month Internship / Attachment →</a>
-
-        </div>
-      </div>
-
-      <!-- FREE DATA DETECTIVE TOOLKIT EMAIL CAPTURE -->
-      <div id="toolkit" class="toolkit-banner">
-        <div class="toolkit-info">
-          <img src="twevixcare_logo.png" alt="Data Detective Mascot" onerror="this.style.display='none'" />
-          <div>
-            <span class="card-tag card-tag-amber">🎁 FREE SERIES 1 COMPANION GIFT</span>
-            <h3 style="font-size:22px; margin-bottom:8px;">Claim Your Free "Data Detective Toolkit" (Series 1 Starter Bundle)</h3>
-            <p style="font-size:14px; color:#CBD5E1;">
-              Companion toolkit to <strong>Series 1: Understanding Data Analytics</strong>. Enter your email to unlock practice CSV datasets, interactive sandbox access for Cases 1–3, and our 1-page KPI & Profit Cheat Sheet.
-            </p>
-          </div>
-        </div>
-
-               <div class="toolkit-form" style="text-align:center;">
-          <p style="font-size:13px; color:#E2E8F0; margin-bottom:14px;">
-            Enter your name and email on our verified portal to instantly receive the <strong>Series 1 Practice CSVs</strong>, <strong>KPI Cheat Sheet</strong>, and <strong>Cloud Sandbox Access</strong>:
-          </p>
-          <a href="https://preview.mailerlite.io/forms/2818391/205001111235462579/share" target="_blank" rel="noopener" class="btn btn-amber" style="width:100%; font-size:15px; padding:14px 20px;">
-            🎁 Unlock Free Data Detective Toolkit Now →
-          </a>
-          <p style="font-size:11px; color:#94A3B8; margin-top:10px;">
-            ✔ Instant automated email delivery • Verified by Twevic Care™
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-          <div id="toolkitMsg" style="display:none; margin-top:10px; font-size:13px; color:#6EE7B7; font-weight:600;">
-            ✔ Sent! Check your inbox to confirm your email & unlock your Series 1 Data Detective Toolkit.
-          </div>
-        </form>
-
-
-
-      </div>
-    </div>
-  </section>
-
-   <!-- 3-SERIES BOOK SECTION -->
-  <section id="books" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding-bottom: 88px;">
-    <div class="container">
-      <div class="sec-head">
-        <span class="sec-tag" style="color:#D97706;">Official Lab Curriculum</span>
-        <h2>Simplifying Data Analytics to a Toddler (3-Series Book)</h2>
-        <p>Authored by <strong>Willa Abraham, MSc</strong> — pairing plain-English data mastery with live cloud simulations.</p>
-      </div>
-
-      <div class="grid-3">
-        <!-- Series 1 Card (Sky Cyan Outline) -->
-        <div class="card" style="background:#F0F9FF; border:2px solid #0EA5E9; border-top:6px solid #0EA5E9; box-shadow:0 8px 20px rgba(14,165,233,0.10);">
-          <div>
-            <span class="card-tag">SERIES 01 • FOUNDATIONS</span>
-            <h3>Series 1: Understanding Data Analytics</h3>
-            <p>Demystifies data types, cleaning messy records, asking sharp business questions, and spotting patterns—built for beginners, students, and career changers.</p>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <a href="https://www.amazon.com/How-Be-Data-Analyst-Detective-ebook/dp/B0HSFZ5J1J/" target="_blank" rel="noopener" class="btn btn-amber btn-sm" style="width:100%;">Buy Series 1 on Amazon →</a>
-            <a href="#toolkit" style="font-size:13px; font-weight:700; color:#0284C7; text-align:center;">Includes Free Data Detective Kit ↑</a>
-          </div>
-        </div>
-
-        <!-- Series 2 Card (Deep Navy Outline) -->
-        <div class="card" style="background:#F8FAFC; border:2px solid #1E3A8A; border-top:6px solid #1E3A8A; box-shadow:0 8px 20px rgba(30,58,138,0.10);">
-          <div>
-            <span class="card-tag" style="background:#DBEAFE; color:#1E3A8A;">SERIES 02 • EXECUTION</span>
-            <h3>Series 2: Putting Data to Work</h3>
-            <p>Hands-on SQL querying, Python automation, BI dashboard design, and predictive forecasting models applied to real retail, clinical, and operational datasets.</p>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <a href="YOUR_SERIES_2_AMAZON_LINK" target="_blank" rel="noopener" class="btn btn-navy btn-sm" style="width:100%;">Buy Series 2 on Amazon →</a>
-            <a href="#programs" style="font-size:13px; font-weight:700; color:#1E3A8A; text-align:center;">Core 12-Week Lab Textbook →</a>
-          </div>
-        </div>
-
-        <!-- Series 3 Card (Amber Gold Outline) -->
-        <div class="card" style="background:#FFFBEB; border:2px solid #F59E0B; border-top:6px solid #F59E0B; box-shadow:0 8px 20px rgba(245,158,11,0.12);">
-          <div>
-            <span class="card-tag card-tag-amber">SERIES 03 • LEADERSHIP</span>
-            <h3>Series 3: Leading with Data and Strategy</h3>
-            <p>Equips managers, founders, and senior analysts to turn quantitative insights into 90-day profit turnarounds, AI governance, and executive boardroom decisions.</p>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <a href="YOUR_SERIES_3_AMAZON_LINK" target="_blank" rel="noopener" class="btn btn-amber btn-sm" style="width:100%;">Buy Series 3 on Amazon →</a>
-            <a href="https://twevix-enterprise-diagnostic-os.streamlit.app/" target="_blank" rel="noopener" style="font-size:13px; font-weight:700; color:#D97706; text-align:center;">Launch Diagnostic OS →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- HRTECH JOB BOARD & RECRUITER PORTAL -->
-  <section id="jobs" style="padding-top: 84px;">
-
-    <div class="container">
-      <div class="sec-head">
-        <span class="sec-tag">HRTech Hiring & Talent Marketplace</span>
-        <h2>Twevic Care™ & Twevix Pulse™ Job Board</h2>
-        <p>Recruiters and employers advertise Data, AI, BI & 3-Month Internship vacancies directly to our SHA-256 verified talent pool.</p>
-      </div>
-
-      <div class="jobs-layout">
-        <div id="jobList">
-          <div class="job-card">
-            <div>
-              <span class="card-tag card-tag-amber">3-Month Internship / Attachment • Kigali / Hybrid</span>
-              <h3 style="font-size:18px; color:var(--navy); margin:4px 0;">Junior Data & Kinyarwanda NLP Annotator (Managed Micro-Squad)</h3>
-              <p style="font-size:13px; color:var(--text-muted);"><strong>Twevix Pulse™ Delivery Network</strong> • Python, NLP Tagging, Data QA</p>
-            </div>
-            <button class="btn btn-navy btn-sm" onclick="openModal('learner')">Apply with TVX- ID →</button>
-          </div>
-
-          <div class="job-card">
-            <div>
-              <span class="card-tag">Full-Time • Kigali, Rwanda</span>
-              <h3 style="font-size:18px; color:var(--navy); margin:4px 0;">Healthcare Operations & BI Data Analyst</h3>
-              <p style="font-size:13px; color:var(--text-muted);"><strong>Partner Polyclinic Network</strong> • SQL, Power BI, Patient Surge & Cold-Chain Audits</p>
-            </div>
-            <button class="btn btn-navy btn-sm" onclick="openModal('learner')">Apply Now →</button>
-          </div>
-
-          <div class="job-card">
-            <div>
-              <span class="card-tag">Contract / Remote • Musanze & Kigali</span>
-              <h3 style="font-size:18px; color:var(--navy); margin:4px 0;">SME Margin & Inventory Diagnostic Associate</h3>
-              <p style="font-size:13px; color:var(--text-muted);"><strong>Rwanda Agri & Retail Cooperative</strong> • Excel, Python, RFM Customer Retention</p>
-            </div>
-            <button class="btn btn-navy btn-sm" onclick="openModal('learner')">Apply Now →</button>
-          </div>
-        </div>
-
-        <div class="recruiter-box">
-          <span style="font-size:11px; font-weight:800; color:var(--amber-hover); text-transform:uppercase; letter-spacing:0.08em;">Recruiter & Employer Portal</span>
-          <h3 style="font-size:20px; margin:6px 0 10px;">Advertise a Job or Hire a Supervised Intern Squad</h3>
-          <p style="font-size:13px; color:#CBD5E1; margin-bottom:14px;">Post your Data Analyst, BI, Software, or 3-Month Internship opening directly to pre-vetted, SHA-256 verified candidates.</p>
-          <form onsubmit="addJobPost(event)">
-            <input type="text" id="jobTitle" class="input input-dark" required placeholder="Role Title (e.g. Junior SQL Analyst)" />
-            <input type="text" id="jobCompany" class="input input-dark" required placeholder="Company / Organization Name" />
-            <select id="jobType" class="input input-dark">
-              <option value="Full-Time">Full-Time</option>
-              <option value="3-Month Internship">Internship / Attachment (3+ Mo)</option>
-              <option value="Contract / Remote">Contract / Remote</option>
-            </select>
-            <input type="text" id="jobLocation" class="input input-dark" required placeholder="Location (e.g. Kigali / Musanze / Remote)" />
-            <input type="text" id="jobSkills" class="input input-dark" required placeholder="Key Skills (e.g. Python, SQL, Power BI)" />
-            <button type="submit" class="btn btn-amber" style="width:100%;">Publish Vacancy Live →</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SHA-256 CREDENTIAL VERIFIER -->
-  <section id="verify" class="verify-sec">
-    <div class="container">
-      <span class="sec-tag">Zero-Trust HRTech Verification</span>
-      <h2 style="font-size:26px; color:var(--navy); margin-bottom:8px;">Verify a Graduate's SHA-256 Credential ID</h2>
-      <p style="font-size:14px; color:var(--text-muted);">
-        Employers and universities can validate any <code>TVX-</code> portfolio certificate instantaneously on the <strong>Twevix Pulse™ Ledger</strong>.
-      </p>
-      <div class="verify-box">
-        <input type="text" id="credInput" class="input" placeholder="Enter ID (e.g. TVX-2026-DEMO)" />
-        <a href="https://twevix-pulse-verify.streamlit.app/" target="_blank" rel="noopener" class="btn btn-navy" style="white-space:nowrap;">Verify ID →</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong style="color:#fff; font-size:14px;">Twevic Care™ — A Division of TWEVIX Z LTD (TIN: 157352094)</strong><br />
-        Kigali & Musanze, Rwanda • Tel / WhatsApp: +250 725 065 204 • Email: willa@twevixcare.com
-      </div>
-      <div class="footer-links">
-        <a href="https://twevix.com" target="_blank">Twevix™</a>
-        <a href="https://twevix.com" target="_blank">TechYatch Lab™</a>
-        <a href="https://twevix.com" target="_blank">Twevix Pulse™</a>
-        <a href="https://twevix.com" target="_blank">Twevix Enterprise™</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- APPLICATION MODAL -->
-  <div id="actionModal" class="modal-backdrop">
-    <div class="modal-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-        <h3 id="modalTitle" style="font-size:18px; color:var(--navy);">Apply for Training / 3-Month Internship</h3>
-        <button onclick="closeModal()" style="background:none; border:none; font-size:18px; cursor:pointer;">✕</button>
-      </div>
-      <form onsubmit="submitModal(event)">
-        <input type="text" class="input" required placeholder="Full Name / Organization Name" />
-        <input type="email" class="input" required placeholder="Email Address" />
-        <input type="tel" class="input" required placeholder="WhatsApp / Phone Number (+250...)" />
-        <select id="modalSelect" class="input">
-          <option>12-Week Applied Data Science Training (Student / Career Changer / Pro)</option>
-          <option>3-Month Minimum Industrial Attachment / Internship</option>
-          <option>University / Academic Faculty Partnership</option>
-          <option>Recruiter / Employer Job Posting & Talent Inquiry</option>
-        </select>
-        <textarea rows="3" class="input" placeholder="Tell us your background (University/Course, Career Goal, or Role Details)..."></textarea>
-        <button type="submit" class="btn btn-amber" style="width:100%;">Submit Application →</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- INTERACTIVE SCRIPTS -->
-  <script>
-    function updateSim(val) {
-      document.getElementById('simVal').textContent = val + '%';
-      document.getElementById('simProfit').textContent = '+' + (val * 800000).toLocaleString() + ' RWF';
-    }
-    function handleToolkitSubmit(e) {
-      e.preventDefault();
-      document.getElementById('toolkitMsg').style.display = 'block';
-    }
-    function addJobPost(e) {
-      e.preventDefault();
-      const title = document.getElementById('jobTitle').value;
-      const company = document.getElementById('jobCompany').value;
-      const type = document.getElementById('jobType').value;
-      const loc = document.getElementById('jobLocation').value;
-      const skills = document.getElementById('jobSkills').value;
-      const card = document.createElement('div');
-      card.className = 'job-card';
-      card.style.border = '2px solid #F59E0B';
-      card.innerHTML = `
-        <div>
-          <span class="card-tag card-tag-amber">${type} • NEW • ${loc}</span>
-          <h3 style="font-size:18px; color:var(--navy); margin:4px 0;">${title}</h3>
-          <p style="font-size:13px; color:var(--text-muted);"><strong>${company}</strong> • ${skills}</p>
-        </div>
-        <button class="btn btn-navy btn-sm" onclick="openModal('learner')">Apply Now →</button>
-      `;
-      document.getElementById('jobList').prepend(card);
-      e.target.reset();
-    }
-    function verifyCredential() {
-      if (document.getElementById('credInput').value.trim().length > 2) {
-        document.getElementById('verifyResult').style.display = 'block';
-      }
-    }
-    function openModal(mode) {
-      document.getElementById('modalTitle').textContent = mode === 'recruiter'
-        ? 'Recruiter / Employer Hiring & Partnership'
-
+    </a>
+    <nav class="nav-links">
+      <a href="#pathways">Clinical Pathways</a>
+      <a href="#engines">AI &amp; Polyglot NLP</a>
+      <a href="#staffing">Staffing &amp; Deployments</a>
+      <a href="https://twevix.com" target="_blank">Verify on Pulse ↗</a>
+    </nav>

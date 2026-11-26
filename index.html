@@ -81,7 +81,9 @@
     .sec-head p { color: var(--text-muted); font-size: 15px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+    .card { background: #fff; border: 1.5px solid #BAE6FD; border-top: 4px solid #0284C7; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.06); transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { border-color: #0284C7; transform: translateY(-3px); box-shadow: 0 10px 24px rgba(2, 132, 199, 0.14); }
+
     .card-featured { border: 2px solid var(--amber); }
     .card-tag { display: inline-block; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: #E0F2FE; color: #075985; margin-bottom: 12px; }
     .card-tag-amber { background: #FEF3C7; color: #92400E; }

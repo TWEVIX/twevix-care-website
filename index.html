@@ -141,3 +141,244 @@
       <a href="#staffing">Staffing &amp; Deployments</a>
       <a href="https://twevix.com" target="_blank">Verify on Pulse ↗</a>
     </nav>
+    <section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="pill">🏥 APPLIED HEALTHTECH + CLINICAL WORKFORCE • UK &amp; RWANDA</div>
+      <h1>Predictive Clinical Time-Series, <span>Multilingual Patient NLP</span> &amp; Safe Healthcare Staffing.</h1>
+      <p>Built for <strong>hospitals, polyclinics, pharmacies, and health networks</strong>. Forecast 14-day patient surges, safeguard cold-chain integrity, analyze multilingual patient feedback across African &amp; international languages, and anchor <strong>SHA-256 verified clinical audits</strong> on TWEVIX PULSE™.</p>
+      <div class="hero-btns">
+        <a href="https://streamlit.app" target="_blank" class="btn btn-cyan">Launch Twevix Care™ App →</a>
+        <button onclick="openModal('clinic')" class="btn btn-outline">Deploy 90-Day Clinic Pilot</button>
+      </div>
+      <div class="hero-note">Zero-setup cloud architecture • Holt-Winters Time-Series + Twevix Polyglot™ NLP • Verified by <a href="https://twevix.com" target="_blank" style="color:#38BDF8">://twevix.com</a></div>
+    </div>
+
+    <div class="sandbox-card">
+      <div class="sandbox-top">
+        <div class="dots">
+          <span class="dot" style="background:#EF4444"></span>
+          <span class="dot" style="background:#F59E0B"></span>
+          <span class="dot" style="background:#10B981"></span>
+          <span style="margin-left:6px">twevix-care.streamlit.app</span>
+        </div>
+        <span class="badge-live">LIVE SANDBOX</span>
+      </div>
+
+      <div class="sb-tabs">
+        <button id="btn-ts" class="sb-tab active" onclick="switchTab('ts')">📈 Time-Series Surge</button>
+        <button id="btn-nlp" class="sb-tab" onclick="switchTab('nlp')">🗣️ Polyglot Patient NLP</button>
+      </div>
+
+      <div id="tab-ts">
+        <div style="font-size:14px;font-weight:700;margin-bottom:4px">Case 01: 14-Day OPD Surge &amp; Cold-Chain Leak Audit</div>
+        <div style="font-size:12px;color:#94A3B8">Move slider to simulate surge protection &amp; cold-chain waste reduction:</div>
+        <div class="sim-box">
+          <div class="sim-row">
+            <span>Cold-Chain &amp; Triage Optimization:</span>
+            <strong id="ts-pct" style="color:#38BDF8">24%</strong>
+          </div>
+          <input type="range" id="ts-slider" class="sim-slider" min="5" max="45" value="24" oninput="calcTS()" />
+          <div class="sim-row" style="margin-top:8px">
+            <span>Projected Annual Clinic Savings:</span>
+            <strong id="ts-sav" style="color:#6EE7B7">+19,200,000 RWF</strong>
+          </div>
+          <div class="sim-row" style="margin-bottom:0">
+            <span>OPD Wait-Time Reduction:</span>
+            <strong id="ts-wait" style="color:#FBBF24">-38 mins / visit</strong>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-nlp" style="display:none">
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Case 02: Twevix Polyglot™ Clinical Sentiment NLP</div>
+        <select id="nlp-lang" class="input input-dark" style="margin-bottom:8px" onchange="setPreset()">
+          <option value="rw">🇷🇼 Kinyarwanda (Rwanda)</option>
+          <option value="fr">🇫🇷 French (Francophone Africa / EU)</option>
+          <option value="sw">🇰🇪 Swahili / Kiswahili (East Africa)</option>
+          <option value="pcm">🇳🇬 Nigerian Pidgin (West Africa)</option>
+          <option value="yo">🇳🇬 Yoruba (West Africa)</option>
+          <option value="ha">🇳🇬 Hausa (West Africa)</option>
+          <option value="en">🇬🇧 English (UK / Global)</option>
+          <option value="ar">🌍 Arabic (North Africa / MENA)</option>
+        </select>
+        <textarea id="nlp-msg" class="input input-dark" rows="2" style="margin-bottom:8px">Nategereje amasaha atatu kuri reception kandi umwana afite umuriro mwinshi cyane.</textarea>
+        <div class="sim-box" style="margin:0 0 12px;padding:10px 14px">
+          <div class="sim-row"><span>Sentiment Polarity:</span><strong id="nlp-pol" style="color:#FBBF24">Urgent Negative (-0.84)</strong></div>
+          <div class="sim-row" style="margin-bottom:0"><span>Clinical Triage Flag:</span><strong id="nlp-flg" style="color:#F87171">🚨 Pediatric Fever Alert</strong></div>
+        </div>
+      </div>
+
+      <div class="sha-bar">
+        <span id="sha-id">SHA-256: TVX-CARE-2026-8F41C2...E90B</span>
+        <a href="https://twevix.com" target="_blank" style="color:#6EE7B7;font-weight:700">✔ Verify on Pulse ↗</a>
+      </div>
+      <a href="https://streamlit.app" target="_blank" class="btn btn-cyan" style="width:100%">Launch Full Clinical Cloud Sandbox →</a>
+    </div>
+  </div>
+</section>
+<section id="pathways">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">INTEGRATED HEALTHCARE VERTICALS</span>
+      <h2>Clinical Decision-Intelligence, Safe Staffing &amp; Workforce Training</h2>
+      <p>Combining proprietary machine learning software with data-matched clinical recruitment and accredited healthcare data training.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div>
+          <span class="card-tag">TRACK 01 • PROPRIETARY HEALTHTECH SAAS</span>
+          <h3>Predictive Clinical Operations &amp; Governance AI</h3>
+          <p>No-code cloud architecture allowing hospitals and clinics to ingest anonymized operational data for real-time forecasting and governance.</p>
+          <ul class="check-list">
+            <li><strong>14-Day Surge &amp; Wait Protection:</strong> Holt-Winters time-series models prevent 4-hour wait breaches and optimize nurse rosters.</li>
+            <li><strong>Cold-Chain &amp; Billing ML Audits:</strong> IsolationForest anomaly detection catches vaccine temperature excursions and claim leaks.</li>
+            <li><strong>Multilingual Patient Voice NLP:</strong> Analyzes patient feedback in Kinyarwanda, French, Swahili, Pidgin, Yoruba, Hausa, English &amp; Arabic.</li>
+            <li><strong>Governance &amp; MLOps Drift:</strong> Demographic triage equity auditing paired with 36-month clinical ROI modeling.</li>
+          </ul>
+        </div>
+        <a href="https://streamlit.app" target="_blank" class="btn btn-navy">Launch HealthTech Engine →</a>
+      </div>
+
+      <div class="card card-featured">
+        <div>
+          <span class="card-tag card-tag-amber">TRACK 02 • CLINICAL WORKFORCE &amp; TRAINING</span>
+          <h3>Data-Matched Nurse Rosters &amp; Clinical Analyst Squads</h3>
+          <p>Bridging clinical staffing shortages and upskilling healthcare teams through supervised placements and applied health analytics.</p>
+          <ul class="check-list">
+            <li><strong>Safe Clinical Staffing:</strong> Acuity-matched nurse rostering and verified clinical operations support pods.</li>
+            <li><strong>Supervised Clinical Data Squads:</strong> Deploy UK-supervised analysts trained via <strong>TechYatch Lab™</strong> for OPD &amp; pharmacy audits.</li>
+            <li><strong>12-Week Clinical Data Training:</strong> Hands-on healthcare SQL, Power BI, surge forecasting, and multilingual clinical NLP.</li>
+            <li><strong>SHA-256 Verified Credentials:</strong> Every graduate and clinical audit receives a tamper-proof signature on <strong>TWEVIX PULSE™</strong>.</li>
+          </ul>
+        </div>
+        <button onclick="openModal('staffing')" class="btn btn-amber">Request Clinical Squad / Enroll Team →</button>
+      </div>
+    </div>
+
+    <div id="toolkit" class="toolkit-banner">
+      <div class="toolkit-info">
+        <img src="twevixcare_logo.png" alt="Twevix Care Kit" />
+        <div>
+          <span class="pill" style="margin-bottom:8px">🎁 FREE CLINICAL OPS STARTER BUNDLE</span>
+          <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Claim Your Free "Polyclinic Surge &amp; Cold-Chain Audit Kit"</h3>
+          <p style="font-size:14px;color:#CBD5E1">Unlock anonymized OPD patient-flow CSV templates, cold-chain excursion checklists, multilingual patient survey scripts, and instant cloud sandbox access.</p>
+        </div>
+      </div>
+      <form class="toolkit-form" onsubmit="claimKit(event)">
+        <div class="form-row">
+          <input type="text" class="input" placeholder="Your Name / Clinic" required />
+          <input type="email" class="input" placeholder="Work Email" required />
+        </div>
+        <button type="submit" class="btn btn-amber" style="width:100%">🎁 Unlock Free Clinic Audit Kit Now →</button>
+        <div id="kit-msg" style="display:none;margin-top:8px;font-size:12px;color:#6EE7B7;font-weight:700">✔ Sent! Check your inbox for your Clinic Audit Kit &amp; Sandbox Link.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="engines" style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">PROPRIETARY ML &amp; NLP CORE</span>
+      <h2>Three Intelligence Engines Powering Twevix Care™</h2>
+      <p>Built on reusable time-series, multilingual NLP, and algorithmic fairness modules shared across the Twevix™ ecosystem.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div>
+          <span class="card-tag">ENGINE 01 • TIME-SERIES</span>
+          <h3>Clinical Surge &amp; Inventory Forecaster</h3>
+          <p>Holt-Winters and seasonal decomposition models forecasting daily OPD arrivals, bed occupancy, and essential medicine reorder points.</p>
+        </div>
+        <a href="https://streamlit.app" target="_blank" class="btn btn-navy">Test Surge Forecaster →</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-tag">ENGINE 02 • POLYGLOT NLP</span>
+          <h3>African &amp; International Sentiment Core</h3>
+          <p>Low-resource multilingual NLP handling code-switched patient feedback across Kinyarwanda, French, Swahili, Pidgin, Yoruba, Hausa, English &amp; Arabic.</p>
+        </div>
+        <a href="https://streamlit.app" target="_blank" class="btn btn-navy">Test Multilingual NLP →</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-tag card-tag-amber">ENGINE 03 • GOVERNANCE</span>
+          <h3>Cold-Chain &amp; Triage Equity Auditor</h3>
+          <p>Automated IsolationForest outlier detection for vaccine refrigeration logs paired with demographic fairness checks to prevent triage bias.</p>
+        </div>
+        <a href="https://streamlit.app" target="_blank" class="btn btn-navy">Open Governance Module →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="staffing">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">HEALTHCARE RECRUITMENT &amp; LIVE DEPLOYMENTS</span>
+      <h2>Active Clinical Deployments &amp; Verified Staffing</h2>
+      <p>Recruit SHA-256 verified healthcare analysts and acuity-matched clinical support teams, or deploy a managed SaaS pod.</p>
+    </div>
+    <div class="jobs-layout">
+      <div>
+        <div class="job-card">
+          <div>
+            <span class="card-tag" style="margin-bottom:6px">ACTIVE PILOT • KIGALI POLYCLINIC NETWORK</span>
+            <h3 style="font-size:17px;margin-bottom:4px">OPD Patient Surge &amp; Cold-Chain Telemetry</h3>
+            <p style="margin-bottom:0;font-size:13px">14-day outpatient forecasting &amp; vaccine fridge alerts • SQL, Power BI, Python</p>
+          </div>
+          <a href="https://twevix.com" target="_blank" class="btn btn-navy btn-sm">View Telemetry ↗</a>
+        </div>
+        <div class="job-card">
+          <div>
+            <span class="card-tag card-tag-amber" style="margin-bottom:6px">WORKFORCE • SAFE CLINICAL STAFFING</span>
+            <h3 style="font-size:17px;margin-bottom:4px">Data-Matched Nurse Roster &amp; Clinical Ops Pod</h3>
+            <p style="margin-bottom:0;font-size:13px">Acuity-matched nursing shifts &amp; supervised clinical data analysts • UK &amp; Rwanda</p>
+          </div>
+          <button onclick="openModal('staffing')" class="btn btn-amber btn-sm">Request Staff →</button>
+        </div>
+        <div class="job-card">
+          <div>
+            <span class="card-tag" style="margin-bottom:6px">MANAGED SAAS POD • $299/MO</span>
+            <h3 style="font-size:17px;margin-bottom:4px">Multilingual Patient Experience &amp; Triage NLP Audit</h3>
+            <p style="margin-bottom:0;font-size:13px">Automated SMS/WhatsApp patient feedback scoring in 8+ African &amp; global languages</p>
+          </div>
+          <a href="https://twevix.com" target="_blank" class="btn btn-navy btn-sm">Subscribe on Pulse ↗</a>
+        </div>
+      </div>
+
+      <div class="recruiter-box">
+        <span class="pill" style="margin-bottom:10px">HOSPITAL &amp; CLINIC PORTAL</span>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:8px">Request Clinical Staff or AI Pilot</h3>
+        <p style="font-size:13px;color:#CBD5E1;margin-bottom:14px">Onboard your hospital, polyclinic, or pharmacy for predictive software or verified clinical staffing.</p>
+        <form onsubmit="submitQuick(event)">
+          <input type="text" class="input" placeholder="Hospital / Clinic Name" required />
+          <input type="email" class="input" placeholder="Official Email" required />
+          <select class="input">
+            <option>Deploy 90-Day Clinical AI &amp; Surge Pilot</option>
+            <option>Hire Verified Clinical Data / Nurse Squad</option>
+            <option>Enroll Staff in 12-Week Health Data Training</option>
+          </select>
+          <button type="submit" class="btn btn-cyan" style="width:100%">Submit Healthcare Inquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="verify" class="verify-sec">
+  <div class="container">
+    <span class="sec-tag">ZERO-TRUST CRYPTOGRAPHIC VERIFICATION</span>
+    <h2 style="font-size:28px;font-weight:800;color:var(--navy)">Verify Any Clinical Audit or Credential on TWEVIX PULSE™</h2>
+    <p style="color:var(--text-muted);font-size:14.5px;max-width:640px;margin:8px auto 0">Health regulators, insurers, and hospital boards can validate any <code style="color:#0EA5E9;font-weight:700">TVX-CARE-</code> cold-chain audit or clinical analyst certificate instantaneously on our central ledger.</p>
+    <div class="verify-box">
+      <a href="https://twevix.com" target="_blank" class="btn btn-navy">Launch SHA-256 Auditor on TWEVIX PULSE™ ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+
+
+    

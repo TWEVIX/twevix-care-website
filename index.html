@@ -462,6 +462,46 @@
     <span>HIPAA / GDPR Anonymized Schema • Zero Raw PII Storage</span>
   </div>
 </footer>
+<script>
+  function claimKit(e) {
+    e.preventDefault();
+    const name = document.getElementById("kitName").value;
+    const email = document.getElementById("kitEmail").value;
+    document.getElementById("kit-msg").style.display = "block";
+
+    fetch("https://formspree.io", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "Twevix Care Audit Kit Unlocked: " + name,
+        clinic_name: name,
+        work_email: email
+      })
+    }).finally(() => {
+      window.open("https://google.com", "_blank");
+    });
+  }
+
+  function switchTab(tab) {
+    const surgePanel = document.getElementById("panel-surge");
+    const nlpPanel = document.getElementById("panel-nlp");
+    const tabSurge = document.getElementById("tab-surge");
+    const tabNlp = document.getElementById("tab-nlp");
+    if (surgePanel && nlpPanel) {
+      surgePanel.style.display = tab === "surge" ? "block" : "none";
+      nlpPanel.style.display = tab === "nlp" ? "block" : "none";
+    }
+    if (tabSurge && tabNlp) {
+      tabSurge.classList.toggle("active", tab === "surge");
+      tabNlp.classList.toggle("active", tab === "nlp");
+    }
+  }
+
+  function openModal(mode) {
+    window.open("https://streamlit.app", "_blank");
+  }
+</script>
+  
 </body>
 </html>
 
